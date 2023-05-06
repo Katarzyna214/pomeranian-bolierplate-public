@@ -3,11 +3,11 @@ import './styles.css';
 export function Exercise() {
   const mathResult1 = 2 * 5;
   const mathResult2 = 3 / 2;
-  const mathResult3 = Math.pow(3,2);
-  const mathResult4 = Math.sqrt(3,2);
+  const mathResult3 = Math.pow(3, 2);
+  const mathResult4 = Math.sqrt(3, 2);
   const mathResult41 = mathResult4.toFixed(2);
   const mathResult5 = 3 % 2;
-    return (
+  return (
     <div className="playing-with-variables">
       <section>
         <h2>Operacje matematyczne</h2>
