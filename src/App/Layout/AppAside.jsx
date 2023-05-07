@@ -1,5 +1,10 @@
 import { NavLink } from 'react-router-dom';
-
+import { CalendarIcon } from '../Components/Icons/CalendarIcon';
+import { EditIcon } from '../Components/Icons/EditIcon';
+import {ElementIcon} from '../Components/Icons/ElementIcon';
+import {HouseIcon} from '../Components/Icons/HouseIcon';
+import {PersonalCardIcon} from '../Components/Icons/PersonalCardIcon';
+import {SettingIcon} from '../Components/Icons/SettingIcon';
 import './styles/aside.css';
 export function AppAside() {
   return (
@@ -19,6 +24,7 @@ export function AppAside() {
             <NavLink to="exercises">Ćwiczenia</NavLink>
           </li>
           <li>
+            <CalendarIcon />
             <NavLink to="calendar">Kalendarz</NavLink>
           </li>
           <li>
