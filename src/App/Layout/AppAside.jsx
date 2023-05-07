@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
 import './styles/aside.css';
-
 export function AppAside() {
   return (
     <aside>
