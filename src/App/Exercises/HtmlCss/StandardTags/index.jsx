@@ -81,9 +81,9 @@ export function Exercise1() {
         <div className="forth-paragraph">
           A lot of things to do <span className="italics">#todo</span></div>
           <div className="lista">
-            <div>Todo 1</div>
-            <div>Todo 2</div>
-            <div>Todo 3</div>
+            <div className="element1">Todo 1</div>
+            <div className="element1">Todo 2</div>
+            <div className="element1">Todo 3</div>
           </div>
         </div>
       </div>

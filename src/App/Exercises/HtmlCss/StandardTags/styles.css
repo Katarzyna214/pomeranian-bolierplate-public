@@ -63,5 +63,8 @@ content: open-quote;
   color: grey;
   font-size: 25px;
   line-height: 8px;
-  /* list-style-type:circle; */
+ 
+}
+.element1 {
+   list-style-type:circle;
 }
