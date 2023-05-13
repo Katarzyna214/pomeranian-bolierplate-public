@@ -1,0 +1,19 @@
+.colorName {
+color:red;
+}
+.shortenHex {
+    color:#f60;
+}
+.normalHex {
+    color:#f58796
+}
+.rgb {
+    color:rgb(255, 0, 0)
+}
+.rgba {
+    color:rgba(255, 0, 0, .5)
+    /* przeźroczystość */
+}
+.hsl {
+    color:hsl(170, 30%, 50%)
+}
