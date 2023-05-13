@@ -1,0 +1,71 @@
+.faked-tags {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.faked-tags div {
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.tytuł {
+  font-size:35px;
+  font-weight:bolder;
+  line-height:normal;
+}
+.date {
+  font-size: small;
+  line-height: 10px;
+}
+.woda {
+  font-weight:bold;
+  font-size: 20px;
+}
+.under{
+  vertical-align: sub;
+}
+.bold {
+  font-weight: bold;
+}
+.date1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.above {
+ vertical-align: super;
+}
+.italics {
+  font-style: italic;
+}
+.quote::before {
+content: open-quote;
+}
+.quote::after {
+  content: close-quote;
+  }
+.delete{
+  text-decoration: line-through;
+}
+.third-paragraph {
+  font-weight: bold;
+  font-size: 20px;
+}
+.underline{
+  text-decoration:underline;
+}
+.forth-paragraph{
+  font-weight: bold;
+  color: grey;
+  font-size: 25px;
+}
+.lista {
+  font-weight:400;
+  color: grey;
+  font-size: 25px;
+  line-height: 8px;
+  
+ 
+}
+.element1 {
+   list-style-type:circle;
+}
