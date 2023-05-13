@@ -1,1 +1,10 @@
-.colors .colorName { color: aqua; } .colors .shortenHex { color: #f70; } .colors .normalHex { color: #f22205; } .colors .rgb { color: rgb(200, 150, 100); } .colors .rgba { color: rgba(250, 200, 120, 0.5); } .colors .hsl { color: hsl(200, 30%, 60%); } .opacity { opacity: 50%; color: black; padding: 50px 0px; /* background-color: rgba(250, 200, 120, 0.5); */ }
+.imageBackground{
+    height: 200px;
+    width: 200px;
+    background-image: url('../../../Images/rower.png');
+    background-size: contain;
+    background-position: center;
+    /* background-position-x: 100px; */
+    background-repeat: no-repeat;
+    filter:contrast(100%);
+}
