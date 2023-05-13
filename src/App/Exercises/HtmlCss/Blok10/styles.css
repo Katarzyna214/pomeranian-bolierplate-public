@@ -25,12 +25,12 @@ div p:last-child {
   font-size: 25px;
   color: grey;
 }
-div p:last-child::after {
+/* div p:last-child::after {
   content: "Przeczytaj więcej >";
   display: block;
   cursor: pointer;
   color: blue;
- }
+ } */
 .my-custom-arrow.arrowbutton.custombutton.blabla {
   color: red;
   text-align: left;
