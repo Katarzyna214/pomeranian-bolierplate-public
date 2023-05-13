@@ -1,0 +1,30 @@
+.animation1 {
+    /* color:darkgreen; */
+    animation-name: blinking_text;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+    font-size: 200px;
+    font-weight: bold;
+
+}
+@keyframes blinking_text {
+    0% {
+        color:darkgreen;
+        font-size: 200px;
+        font-weight: bold;
+        /* opacity: 1; */
+        /* przeźroczystoćś */
+    }
+    60% {
+        color:blue;
+        font-size: medium;
+        /* font-weight: 150px; */
+        /* opacity: 0.5; */
+    }
+    
+    100% {
+      color: brown;
+      font-size: 100px;
+    /* font-weight:bolder; */
+    }
+}
