@@ -1,0 +1,10 @@
+.imageBackground{
+    height: 200px;
+    width: 200px;
+    background-image: url('../../../Images/rower.png');
+    background-size: contain;
+    background-position: center;
+    /* background-position-x: 100px; */
+    background-repeat: no-repeat;
+    filter:contrast(100%);
+}
