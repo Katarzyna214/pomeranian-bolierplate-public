@@ -6,6 +6,7 @@ export function BoxModel() {
 
   const clickHandler = () => {
     setIsTrue(!isTrue);
+
   };
   return (
     <div className="box-model-base">
