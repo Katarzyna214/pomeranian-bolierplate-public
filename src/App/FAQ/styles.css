@@ -1,0 +1,85 @@
+.faq {
+    color: black;
+    font-family: 'Poppins';
+}
+.naglowek .par1 {
+    color:black;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+}
+.pierwszybox .naglowek2{
+    font-size: 18px;
+    line-height: 34px;
+}
+.faq .pierwszybox {
+-webkit-box-shadow: 80px 20px 30px -41px rgb(196, 193, 193);
+box-sizing: border-box;
+font-size: 18px;
+flex-direction: column;
+align-items: flex-start;
+padding: 18px 24px;
+margin: 18px;
+
+width: 780px;
+height: 266px;
+
+background: #FFFFFF;
+
+border-left: 5px solid #C8CBD1;
+border-radius: 8px;
+align-self: stretch;
+
+}
+.pierwszybox .par2 {
+width: 732px;
+height: 160px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+
+color: #222222;
+align-self: stretch;
+
+}
+.faq .drugibox{
+    box-sizing: border-box;
+    font-size: 18px;
+    
+    align-items: center;
+    padding: 18px 24px;
+    margin: 16px;
+    
+    width: 780px;
+    height: 70px;
+     
+    background: #FFFFFF;
+    border-left: 5px solid #C8CBD1;
+    border-radius: 8px;;
+   
+    align-self: stretch;
+    -webkit-box-shadow: 80px 20px 30px -41px rgb(196, 193, 193);
+}
+.q1 {
+    width: 700px;
+height: 34px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 34px;
+
+align-items: center;
+color: #23213D;
+
+}
+hr {
+width: 708.03px;
+height: 0px;
+border: 1px solid #EBEBEB;
+}

@@ -5,6 +5,7 @@ import { ElementIcon } from '../Components/Icons/ElementIcon';
 import { HouseIcon } from '../Components/Icons/HouseIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
+import { ReactComponent as Messages} from '../Components/Icons/messages.svg';
 import './styles/aside.css';
 export function AppAside() {
   return (
@@ -31,6 +32,10 @@ export function AppAside() {
           <li>
             <CalendarIcon />
             <NavLink to="calendar">Kalendarz</NavLink>
+          </li>
+          <li>
+            <Messages />
+            <NavLink to="faq">FAQ</NavLink>
           </li>
           <li>
             <SettingIcon />

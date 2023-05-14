@@ -8,6 +8,8 @@ import { Exercises } from './App/Exercises';
 import { CV } from './App/CV';
 import { Calendar } from './App/Calendar';
 import { Settings } from './App/Settings';
+import {FAQ} from './App/FAQ';
+
 export function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,7 @@ export function App() {
           <Route path="dashboard/*" element={<Dashboard />} />
           <Route path="cv/*" element={<CV />} />
           <Route path="calendar/*" element={<Calendar />} />
+          <Route path="faq/*" element={<FAQ />} />
           <Route path="settings/*" element={<Settings />} />
           <Route path="exercises/*" element={<Exercises />} />
           <Route path="blocks/*" element={<Blocks />} />
