@@ -83,3 +83,19 @@ hr {
 height: 0px; */
 border: 1px solid #EBEBEB;
 }
+.button{
+    
+    animation-name: rotating_arrow;
+    animation-duration: initial;
+    animation-iteration-count:infinite;
+    transform: rotate(0);
+  }
+@keyframes blinking_arrow {
+    0% {
+        transform: rotate(0);
+    }
+       
+    100% {
+     transform: rotate(45%);
+    }
+}
