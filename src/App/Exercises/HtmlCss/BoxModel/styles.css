@@ -6,7 +6,8 @@
     /* border-radius: 25px; */
     margin: 25px;
     width: 300px;
-
+    font-size: 20px;
+    color: black;
     /* padding: 5px 25px 25px 25px */
     /* padding: 5px 25px */
     margin: 5px 25px;
@@ -25,8 +26,17 @@
     box-sizing: content-box;
     margin: 25px;
     width: 300px;
-color: red;
+    color: red;
     max-height: 200px;
     overflow:auto;
     max-width: 200px;
+}
+.box-model-base .relative-box {
+width: 50%;
+color: black;
+font-size: 0.7em;
+}
+.box-model-base .relative-box1 {
+ color: yellow;
+ width: 220%;
 }
