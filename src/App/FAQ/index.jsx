@@ -19,12 +19,22 @@ export const FAQ = () => {
       />
       <SingleQuestion
         question={'Jak się z nami skontaktować?'}
-        answear={'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'}
+        answear={
+          'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'
+        }
       />
-      <SingleQuestion question={'Jak się z nami skontaktować?'}
-        answear={'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'} />
-      <SingleQuestion question={'Jak się z nami skontaktować?'}
-        answear={'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'} />
+      <SingleQuestion
+        question={'Jak się z nami skontaktować?'}
+        answear={
+          'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'
+        }
+      />
+      <SingleQuestion
+        question={'Jak się z nami skontaktować?'}
+        answear={
+          'Znajdź nas na fb lub wyślij email na adres loremimpsu@gmail.com'
+        }
+      />
     </div>
   );
 };
