@@ -42,6 +42,7 @@ export function Tables() {
     <td className="td">None</td>
   </tr>
 </table>
+
  </div>
        
   );
