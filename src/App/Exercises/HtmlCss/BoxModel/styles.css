@@ -1,0 +1,19 @@
+.paragraf1 {
+    background: green;
+    padding: 50px;
+    /* border: 20px dotted black; */
+    border: 10px solid black;
+    /* border-radius: 25px; */
+    margin: 25px;
+
+    /* padding: 5px 25px 25px 25px */
+    /* padding: 5px 25px */
+    margin: 5px 25px;
+  
+}
+.inlinespan {
+    display: block;
+    /* inlinowy zachowuje sie jak pozostala czesc tekstu z tego paragrafu, blokowy przechodzi do nowej lini nie zachowuje sie jak tekst wyzej */
+    /* display: inline; jeszcze jest none czyli sie nie wyswietli ale gdy najedzie jest widoczny renderowany */
+    background: bisque;
+}
