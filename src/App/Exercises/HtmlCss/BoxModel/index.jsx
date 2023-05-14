@@ -8,7 +8,7 @@ export function BoxModel() {
     setIsTrue(!isTrue);
   };
   return (
-    <div>
+    <div className='box-model-base'>
       <p className="paragraf1" onClick={clickHandler}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
