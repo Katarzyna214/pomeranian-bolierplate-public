@@ -5,6 +5,7 @@
     border: 10px solid black;
     /* border-radius: 25px; */
     margin: 25px;
+    width: 300px;
 
     /* padding: 5px 25px 25px 25px */
     /* padding: 5px 25px */
@@ -12,8 +13,17 @@
   
 }
 .inlinespan {
-    display: block;
+    /* display: block; */
     /* inlinowy zachowuje sie jak pozostala czesc tekstu z tego paragrafu, blokowy przechodzi do nowej lini nie zachowuje sie jak tekst wyzej */
     /* display: inline; jeszcze jest none czyli sie nie wyswietli ale gdy najedzie jest widoczny renderowany */
     background: bisque;
+}
+.paragraf2 {
+    background: green;
+    padding: 50px;
+  
+    border: 10px solid black;
+    box-sizing: content-box;
+    margin: 25px;
+    width: 300px;
 }
