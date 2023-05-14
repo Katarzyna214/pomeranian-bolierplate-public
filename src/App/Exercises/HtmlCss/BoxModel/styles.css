@@ -1,0 +1,42 @@
+.box-model-base .paragraf1 {
+    background: green;
+    padding: 50px;
+    /* border: 20px dotted black; */
+    border: 10px solid black;
+    /* border-radius: 25px; */
+    margin: 25px;
+    width: 300px;
+    font-size: 20px;
+    color: black;
+    /* padding: 5px 25px 25px 25px */
+    /* padding: 5px 25px */
+    margin: 5px 25px;
+  
+}
+.box-model-base .inlinespan {
+    /* display: block; */
+    /* inlinowy zachowuje sie jak pozostala czesc tekstu z tego paragrafu, blokowy przechodzi do nowej lini nie zachowuje sie jak tekst wyzej */
+    /* display: inline; jeszcze jest none czyli sie nie wyswietli ale gdy najedzie jest widoczny renderowany */
+    background: bisque;
+}
+.box-model-base .paragraf2 {
+    background: green;
+    padding: 50px;
+    border: 10px solid black;
+    box-sizing: content-box;
+    margin: 25px;
+    width: 300px;
+    color: red;
+    max-height: 200px;
+    overflow:auto;
+    max-width: 200px;
+}
+.box-model-base .relative-box {
+width: 50%;
+color: black;
+font-size: 0.7em;
+}
+.box-model-base .relative-box1 {
+ color: yellow;
+ width: 220%;
+}
