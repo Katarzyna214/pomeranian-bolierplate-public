@@ -11,14 +11,19 @@ export const SingleQuestion = (props) => {
 
   const clickHandler = () => {
     setIsTrue(!isTrue);
+    
     };
- 
+ const rotatePick =() => {
+  Vector.transform = 'rotate (45deg)';
+ };
   return (
     <div className="pierwszybox">
       <h2 className="naglowek2" >
         {question}
       </h2>
-      <button onClick={clickHandler}> <Vector/> </button>
+      <button onClick={()=> 
+      {clickHandler ()
+      rotatePick () }}> <Vector/> </button>
       <hr className="hr" />
       <p className="par2">{isTrue && answear}</p>
     </div>
