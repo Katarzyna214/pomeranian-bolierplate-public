@@ -1,4 +1,5 @@
 import './styles.css';
+
 export function ArrayRenderToTable() {
   const bands = [
     {
@@ -40,19 +41,25 @@ export function ArrayRenderToTable() {
   ];
 
   return (
-    <html>
-      <head></head>
-      <body>
-      <table>
-        <tr >
-          <th >i</th>
-          <th >i</th>
-          <th >i</th>
-          <th >i</th>
+    <div className='tabela'>
+      <table className='tabelka'>
+        <tbody className='tabel'>
+          <tr className='rowparz'>
+          <th className='row1 numer1' >Band Name</th>
+          <th className='row1 numer2'  > Year Formed</th>
+          <th className='row1 numer3'> Albums</th>
+          <th className='row1 numer4'> Most Famous Song</th>
         </tr>
-        
+        {bands.map(({band, yearFormed, albums, mostFamousSong}) => (
+          <tr key = {band}>
+            <td className='rowniep n1'>{band}</td>
+            <td className='rowniep n2'>{yearFormed}</td>
+            <td className='rowniep n3'>{albums}</td>
+            <td className='rowniep n4'>{mostFamousSong}</td>
+          </tr>
+        ))}
+        </tbody>
       </table>
-      </body>
-      </html>
+      </div>
   );
 }

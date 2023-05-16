@@ -83,7 +83,7 @@ hr {
 height: 0px; */
 border: 1px solid #EBEBEB;
 }
-.button{
+/* .button{
     
     animation-name: rotating_arrow;
     animation-duration: initial;
@@ -98,4 +98,4 @@ border: 1px solid #EBEBEB;
     100% {
      transform: rotate(45%);
     }
-}
+} */

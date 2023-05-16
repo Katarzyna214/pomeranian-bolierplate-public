@@ -10,7 +10,7 @@ export const FAQ = () => {
           Tutaj znajdź odpowiedzi na najczęściej zadawane pytania.
         </p>
       </div>
-
+  
       <SingleQuestion
         question={'Jak mogę zapisać się na szkolenie?'}
         answear={

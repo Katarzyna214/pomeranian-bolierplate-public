@@ -11,9 +11,8 @@ export const SingleQuestion = (props) => {
 
   const clickHandler = () => {
     setIsTrue(!isTrue);
-  };
-
-
+    };
+ 
   return (
     <div className="pierwszybox">
       <h2 className="naglowek2" >
