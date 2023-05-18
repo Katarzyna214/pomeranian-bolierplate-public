@@ -43,22 +43,21 @@ export function ArrayRenderToTable() {
   return (
     <div className='tabela'>
       <table className='tabelka'>
-        <tbody className='tabel'>
-          <tr className='rowparz'>
-          <th className='row1 numer1' >Band Name</th>
-          <th className='row1 numer2'  > Year Formed</th>
-          <th className='row1 numer3'> Albums</th>
-          <th className='row1 numer4'> Most Famous Song</th>
+       
+          <tr className='row1'>
+          <th className='col thead' >Band Name</th>
+          <th className='col thead' > Year Formed</th>
+          <th className='col thead'> Albums</th>
+          <th className='col thead'> Most Famous Song</th>
         </tr>
         {bands.map(({band, yearFormed, albums, mostFamousSong}) => (
-          <tr key = {band}>
-            <td className='rowniep n1'>{band}</td>
-            <td className='rowniep n2'>{yearFormed}</td>
-            <td className='rowniep n3'>{albums}</td>
-            <td className='rowniep n4'>{mostFamousSong}</td>
+          <tr className='row' key = {band}>
+            <td className='col'>{band}</td>
+            <td className='col'>{yearFormed}</td>
+            <td className='col'>{albums}</td>
+            <td className='col'>{mostFamousSong}</td>
           </tr>
         ))}
-        </tbody>
       </table>
       </div>
   );
