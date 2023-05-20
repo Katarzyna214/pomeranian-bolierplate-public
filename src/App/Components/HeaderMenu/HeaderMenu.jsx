@@ -1,8 +1,15 @@
 import './styles.css';
 import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
+import { RightCornerMenuPopup } from '../RighCornerMenuPopup/RightCornerMenuPopup';
+import { useState } from 'react';
 
 export const HeaderMenu = () => {
+  const [isVisible, setVisibility] = useState(false);
+
+  const clickHandler = () => {
+    setVisibility(!isVisible);
+  };
   return (
     <div className="images-container">
       <SettingIcon />
@@ -11,10 +18,15 @@ export const HeaderMenu = () => {
         <img src="http://placekitten.com/500/500" />
       </div>
       <div className="name-surname-container">
-      <h4 >Katarzyna</h4>
-      <h5 >kursantka</h5>
+        <h4>Katarzyna</h4>
+        <h5>kursantka</h5>
       </div>
-      <MenuArrow className="menu-arrow"/>
+      <button onClick={clickHandler} className="header_button">
+        <MenuArrow className="menu-arrow" />{' '}
+      </button>
+      <div className="rightcornermenupopup">
+        {isVisible && <RightCornerMenuPopup />}
+      </div>
     </div>
   );
 };
