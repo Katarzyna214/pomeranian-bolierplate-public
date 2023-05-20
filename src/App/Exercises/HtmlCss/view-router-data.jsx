@@ -10,6 +10,7 @@ import { blockRouterMetaData as blockRouterMetaData13305202325258889888 } from '
 import { blockRouterMetaData as blockRouterMetaData14052023 } from './BoxModel/router-data';
 import { blockRouterMetaData as blockRouterMetaData140520231 } from './Tabeles/router-data';
 import { blockRouterMetaData as blockRouterMetaData1405202312 } from './ArrayRenderToTable/router-data';
+import { blockRouterMetaData as blockRouterMetaData20052023 } from './FloatsAndPositioning//router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
@@ -22,6 +23,7 @@ export const blockRouterMetaData = [
   blockRouterMetaData14052023,
   blockRouterMetaData140520231,
   blockRouterMetaData1405202312,
+  blockRouterMetaData20052023,
 ];
 
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
