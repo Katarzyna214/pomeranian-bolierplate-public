@@ -63,6 +63,7 @@
     brightness(101%) contrast(99%);
 }
 .dashboard-tiles .cvpar {
-color:black;
-font-size: 12px;
+  color: black;
+  font-size: 12px;
+  margin-bottom: 1px;
 }
