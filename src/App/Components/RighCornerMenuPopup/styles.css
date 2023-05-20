@@ -1,0 +1,47 @@
+.rightmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 0px;
+  gap: 6px;
+  isolation: isolate;
+  position: absolute;
+  width: 400px;
+  height: 130px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: 0px -4px 26px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.rightmenu .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 36px;
+  gap: 16px;
+  width: 326px;
+  height: 56px;
+  background: #fe3756;
+  color: white;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+.login .instruction {
+  width: 396px;
+  height: 25px;
+  left: 0px;
+  top: 153px;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-weight: bolder;
+}
+
+.instruction span {
+  color: #fe3756;
+  font-weight: bolder;
+}
