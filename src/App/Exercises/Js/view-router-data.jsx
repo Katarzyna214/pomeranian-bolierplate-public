@@ -4,11 +4,12 @@ import { blockRouterMetaData as blockRouterMetaDataJsVariables1 } from './Exerci
 import { blockRouterMetaData as blockRouterMetaDataJsVariables2 } from './Exercise-js-variables-2/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsFunction1 } from './Exercise-js-functions/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsFunction12 } from './Exercises-js-booleans/router-data';
-
+import { blockRouterMetaData as blockRouterMetaDataJsFunction123 } from './Exercises-js-numbers/router-data';
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
   blockRouterMetaDataJsVariables2,
   blockRouterMetaDataJsFunction1,
   blockRouterMetaDataJsFunction12,
+  blockRouterMetaDataJsFunction123,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

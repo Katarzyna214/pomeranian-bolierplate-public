@@ -3,12 +3,26 @@ import './styles.css';
 export function Exercise() {
   const isValid = true;
   const passStyles = true;
-  const checkStatemenet = isValid && true; // zwraca true
-  const checkStatemenet1 = false && isValid; //zwraca false
-  const checkStatemenet2 = false && true && false; //zwraca false
-  const checkStatemenet3 = false && true && false; //zwraca false
-  const checkStatemenet4 = false || (true && false); //zwraca false
-  // wyrenderuj komponent w zależnosci od zmiennej isValid
+  // const checkStatemenet = isValid && true; // zwraca true
+  // const checkStatemenet1 = false && isValid; //zwraca false
+  // const checkStatemenet2 = false && true && false; //zwraca false
+  // const checkStatemenet3 = false && true && false; //zwraca false
+  // const checkStatemenet4 = false || (true && false); //zwraca false
+  // // wyrenderuj komponent w zależnosci od zmiennej isValid
+
+  // 255; // two-hundred and fifty-five
+  // 255.0; // same number
+  // 255 === 255.0; // true
+  // 255 === 0xff; // true (hexadecimal notation)
+  // 255 === 0b11111111; // true (binary notation)
+  // 255 === 0.255e3; // true (decimal exponential notation)
+  //Match.round()
+  //Match.floor() //zaokraglanie w dol
+  //Match.random() //od 0-1 liczby dowolne
+  //Math.min() //wybiera minimalna wartosc z liczb przekazanych
+  //Math.max() //maksymalna pokaze
+  //parseInt() // jesli mamy tekst 123 zamieni na dokładna liczbe 123 całkowita ktora mozna uzyc do wykonywania dzialan
+  //parseFloat() zmieni na liczbe rzeczywistą
 
   let x = 10;
   let y = 10;
@@ -69,7 +83,7 @@ export function Exercise() {
   //     break;
   //     default: console.log('inna wartosc!') //w innych przypadkach niz 5 i 6 dajemy default i wtedy mi pokazuje co chce dla default. case musimy przerywac default juz nie
   // }
-
+  //na dole jesli passStyle prawdziwe wyswietla mi czerwony background jesli fałsz czarny
   return (
     <>
       {isValid && (
