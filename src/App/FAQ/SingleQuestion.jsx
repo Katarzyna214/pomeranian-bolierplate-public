@@ -7,7 +7,7 @@ export const SingleQuestion = (props) => {
   const question = props.question;
   const answear = props.answear;
 
-  const [isVisible, setVisibility] = useState(true);
+  const [isVisible, setVisibility] = useState(false);
 
   const clickHandler = () => {
     setVisibility(!isVisible);
