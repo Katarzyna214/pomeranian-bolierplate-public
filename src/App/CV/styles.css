@@ -1,3 +1,10 @@
 .dashboard {
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+p .naglowek {
+  color: black;
+  font-size: 18px;
 }
