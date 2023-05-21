@@ -7,7 +7,7 @@ export function Exercise() {
   let hasCar = true;
   let r = 3;
   let string = 'loko';
-  let a = -2;
+  let a = 6;
   let b = 1;
   let c = 1;
   let d = 5.9576;
@@ -48,7 +48,7 @@ export function Exercise() {
     } else if (a == 6) {
       return 'celujacy';
     } else {
-      return 'złe wejscie';
+      return 'złe wejście';
     }
   }
   function sumFloat(c, d) {
@@ -65,13 +65,13 @@ export function Exercise() {
   }
 
   function mathRevenge(a, b, c) {
-    let delta = (b ^ 2) - 4 * a * c;
-    let x_1 = (-b - Math.sqrt(delta)) / (2 * a);
-    let x_2 = (-b + Math.sqrt(delta)) / (2 * a);
-    let x_3 = -b / (2 * a);
+    const delta = (b ^ 2) - 4 * a * c;
+    const x_1 = (-b - Math.sqrt(delta)) / (2 * a);
+    const x_2 = (-b + Math.sqrt(delta)) / (2 * a);
+    const x_3 = -b / (2 * a);
     if (delta > 0) {
       return `Pierwiastkami tego równania kwadratowego są x1= ${x_1} oraz x2= ${x_2} `;
-    } else if ((delta = 0)) {
+    } else if (delta === 0) {
       return `Równanie ma tylko jeden pierwiastek x = ${x_3}`;
     } else {
       return 'To równanie nie ma pierwiastków.';
@@ -91,7 +91,13 @@ export function Exercise() {
       return wynik;
     }
   }
-
+  function absoluteValue(a) {
+    if (a >= 0) {
+      return a;
+    } else {
+      return -a;
+    }
+  }
   return (
     <div>
       <p>Can I drive a car?</p>
@@ -111,7 +117,9 @@ export function Exercise() {
         Zadanie 9. Średnia arytmetyczna dwóch dowolnych liczb to:{' '}
         {average(a, b)}
       </div>
-      <div>Zadanie 10. Wartość bezwzględna z liczby {a} wynosi:</div>
+      <div>
+        Zadanie 10. Wartość bezwzględna z liczby {a} wynosi: {absoluteValue(a)}
+      </div>
       <div>Zadanie 11. </div>
       <div>Zadanie 12. </div>
     </div>
