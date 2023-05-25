@@ -7,12 +7,16 @@ export function Exercise() {
   let hasCar = true;
   let r = 3;
   let string = 'loko';
-  let a = 6;
-  let b = 1;
-  let c = 1;
+  let a = 4;
+  let b = 5;
+  let c = 2;
   let d = 5.9576;
   let no1 = 5;
   let no2 = 7;
+  let x = 8;
+  let y = 9;
+  let h = 15;
+  let num = 1;
 
   function canDrive(age, hasDriverLicense, hasCar) {
     if (age >= 18 && hasDriverLicense && hasCar) {
@@ -65,23 +69,28 @@ export function Exercise() {
   }
 
   function mathRevenge(a, b, c) {
-    const delta = (b ^ 2) - 4 * a * c;
-    const x_1 = (-b - Math.sqrt(delta)) / (2 * a);
-    const x_2 = (-b + Math.sqrt(delta)) / (2 * a);
-    const x_3 = -b / (2 * a);
+    const delta = b * b - 4 * a * c;
     if (delta > 0) {
-      return `Pierwiastkami tego równania kwadratowego są x1= ${x_1} oraz x2= ${x_2} `;
+      const x_1 = (-b - Math.sqrt(delta)) / (2 * a);
+      const x_2 = (-b + Math.sqrt(delta)) / (2 * a);
+      return `Pierwiastkami tego równania kwadratowego są x1= ${x_1.toFixed(
+        2
+      )} oraz x2= ${x_2.toFixed(2)} `;
     } else if (delta === 0) {
-      return `Równanie ma tylko jeden pierwiastek x = ${x_3}`;
+      const x_3 = -b / (2 * a);
+      return `Równanie ma tylko jeden pierwiastek x = ${x_3.toFixed(2)}`;
     } else {
       return 'To równanie nie ma pierwiastków.';
     }
   }
   function getRandom() {
-    return Math.random() * 10;
+    return (Math.random() * 4 + 1.0).toFixed(1);
   }
   function getRandomA() {
-    return Math.round(Math.random() * 10);
+    return Math.floor(Math.random() * 6) + 1;
+  }
+  function getRandomB(x, y) {
+    return Math.floor(Math.random() * (y - x + 1)) + x;
   }
   function average(a, b) {
     let wynik = (a + b) / 2;
@@ -98,6 +107,34 @@ export function Exercise() {
       return -a;
     }
   }
+  function trueorfalse(h) {
+    if (h % 3 === 0 && h % 5 === 0) {
+      return 'Prawda.';
+    } else {
+      return 'Nieprawda.';
+    }
+  }
+  // function isPrime(num) {
+  //   let b1 = 3;
+  //   if (num % 1 === 0 && num % num === 0 && num % b1 === 0) {
+  //     return `Liczba ${num} jest liczbą pierwszą.`;
+  //   } else if (num < 2) {
+  //     return `Liczba ${num} nie jest liczbą pierwszą.`;
+  //   } else {
+  //     return `Liczba ${num} nie jest liczbą pierwszą.`;
+  //   }
+  // }
+  function isPrime(num) {
+    for (let i = 2; i <= num; i++) {
+      if (!num == 1 && !num == 0) {
+        return `Liczba ${num} nie jest liczbą pierwszą.`;
+      } else if (num % i === 0) {
+        return `Liczba ${num} nie jest liczbą pierwszą.`;
+      }
+    }
+    return `Liczba ${num} jest liczbą pierwszą.`;
+  }
+
   return (
     <div>
       <p>Can I drive a car?</p>
@@ -110,8 +147,15 @@ export function Exercise() {
       <div>Zadanie 6. {sumFloat(c, d)}</div>
       <div>Zadanie 7. {mathRevenge(a, b, c)}</div>
       <div>
-        Zadanie 8. Losowa liczba z zakresu (1,5) to {getRandom()}. Losowa liczba
-        całkowita z zakresu (1,5) to {getRandomA()}.
+        Zadanie 8. Losowa liczba z zakresu (1,5) to {getRandom()}.
+        <div>
+          Zadanie 8 A. Losowa liczba całkowita z zakresu (1,5) to {getRandomA()}
+          .
+        </div>
+        <div>
+          Zadanie 8 B. Losowa liczba całkowita z zakresu (x,y) to{' '}
+          {getRandomB(x, y)}
+        </div>
       </div>
       <div>
         Zadanie 9. Średnia arytmetyczna dwóch dowolnych liczb to:{' '}
@@ -120,8 +164,10 @@ export function Exercise() {
       <div>
         Zadanie 10. Wartość bezwzględna z liczby {a} wynosi: {absoluteValue(a)}
       </div>
-      <div>Zadanie 11. </div>
-      <div>Zadanie 12. </div>
+      <div>
+        Zadanie 11. Liczba {h} jest podzielna przez 3 i 5: {trueorfalse(h)}
+      </div>
+      <div>Zadanie 12. {isPrime(num)}</div>
     </div>
   );
 }
