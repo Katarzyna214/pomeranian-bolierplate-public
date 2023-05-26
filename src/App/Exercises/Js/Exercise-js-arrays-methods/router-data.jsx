@@ -1,10 +1,10 @@
 import { Exercise } from './index';
 
 export const blockRouterMetaData = {
-  path: 'js-arrays-basics',
+  path: 'js-array-methods-exercise',
   date: null,
-  linkLabel: 'Tablica w js (blok 20)',
+  linkLabel: 'Metody na tablicach w js (blok 20)',
   blockNo: 20,
   element: <Exercise />,
-  tags: ['array', 'javascript'],
+  tags: ['array', 'javascript', 'method'],
 };
