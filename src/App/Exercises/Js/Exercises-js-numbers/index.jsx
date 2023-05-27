@@ -16,7 +16,7 @@ export function Exercise() {
   let x = 8;
   let y = 9;
   let h = 15;
-  let num = 1;
+  let num = 7;
 
   function canDrive(age, hasDriverLicense, hasCar) {
     if (age >= 18 && hasDriverLicense && hasCar) {
@@ -124,17 +124,24 @@ export function Exercise() {
   //     return `Liczba ${num} nie jest liczbą pierwszą.`;
   //   }
   // }
+  // function isPrime(num) {
+  //   if (num == 1 && num == 0) {
+  //     return `Liczba ${num} nie jest liczbą pierwszą.`;
+  //   }
+  //   for (let i = 1; i <= num; i++) {}
+  //   return `Liczba ${num} jest liczbą pierwszą.`;
+  // }
   function isPrime(num) {
-    for (let i = 2; i <= num; i++) {
-      if (!num == 1 && !num == 0) {
-        return `Liczba ${num} nie jest liczbą pierwszą.`;
-      } else if (num % i === 0) {
-        return `Liczba ${num} nie jest liczbą pierwszą.`;
+    if (num <= 1) {
+      return 'Liczba nie jest liczbą pierwszą.';
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return 'Liczba nie jest liczbą pierwszą.';
       }
     }
-    return `Liczba ${num} jest liczbą pierwszą.`;
+    return 'Liczba jest liczbą pierwszą.';
   }
-
   return (
     <div>
       <p>Can I drive a car?</p>
