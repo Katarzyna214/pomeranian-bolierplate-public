@@ -1,5 +1,8 @@
 .dashboard .dashboard-about-me {
   padding-top: 5rem;
+  position: absolute;
+  right: 127px;
+  top: 30px;
 }
 
 .dashboard .dashboard-about-me .person {
@@ -8,4 +11,9 @@
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
+  position: sticky;
+  color: black;
+}
+.mydataname {
+  color: black;
 }

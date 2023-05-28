@@ -1,8 +1,12 @@
+import { ReactComponent as WavingHand } from '../../Components/Icons/WavingHand.svg';
 export const Blocks = () => {
   return (
     <div className="dashboard-tiles-container">
-      <h2> Hej tu Kasia!</h2>{' '}
-      <p>
+      <h2>
+        {' '}
+        <WavingHand className="wavingHand" /> Hej tu Kasia!
+      </h2>{' '}
+      <p className="dashboardpar1">
         Poniżej znajdziesz najważniejsze informacje na temat mojej działalności
       </p>
       <div className="dashboard-tiles">
