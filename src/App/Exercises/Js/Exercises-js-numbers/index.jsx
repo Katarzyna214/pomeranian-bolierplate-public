@@ -133,14 +133,14 @@ export function Exercise() {
   // }
   function isPrime(num) {
     if (num <= 1) {
-      return 'Liczba nie jest liczbą pierwszą.';
+      return `Liczba ${num} nie jest liczbą pierwszą.`;
     }
     for (let i = 2; i <= Math.sqrt(num); i++) {
       if (num % i === 0) {
-        return 'Liczba nie jest liczbą pierwszą.';
+        return `Liczba ${num} nie jest liczbą pierwszą.`;
       }
     }
-    return 'Liczba jest liczbą pierwszą.';
+    return `Liczba ${num} jest liczbą pierwszą.`;
   }
   return (
     <div>

@@ -5,7 +5,7 @@ import { ElementIcon } from '../Components/Icons/ElementIcon';
 import { HouseIcon } from '../Components/Icons/HouseIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
-import { MessagesIcon} from '../Components/Icons/MessagesIcon';
+import { MessagesIcon } from '../Components/Icons/MessagesIcon';
 import './styles/aside.css';
 export function AppAside() {
   return (
@@ -13,37 +13,37 @@ export function AppAside() {
       <nav>
         <ul>
           <li>
-            <HouseIcon />
+            <HouseIcon className="Icon" />
             <NavLink to="dashboard">Dashboard</NavLink>
           </li>
           <li>
             {' '}
-            <PersonalCardIcon />
+            <PersonalCardIcon className="Icon" />
             <NavLink to="cv">CV</NavLink>
           </li>
           <li>
-            <ElementIcon />
+            <ElementIcon className="Icon" />
             <NavLink to="blocks">Bloki</NavLink>
           </li>
           <li>
-            <EditIcon />
+            <EditIcon className="Icon" />
             <NavLink to="exercises">Ćwiczenia</NavLink>
           </li>
           <li>
-            <CalendarIcon />
+            <CalendarIcon className="Icon" />
             <NavLink to="calendar">Kalendarz</NavLink>
           </li>
           <li>
-            <MessagesIcon />
+            <MessagesIcon className="Icon" />
             <NavLink to="faq">FAQ</NavLink>
           </li>
           <li>
-            <SettingIcon />
+            <SettingIcon className="Icon" />
             <NavLink to="settings">Ustawienia</NavLink>
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '1rem 0' }}>Sidebar items, widgets, etc</p>
+      <p style={{ padding: '4rem 0' }}>Sidebar items, widgets, etc</p>
     </aside>
   );
 }

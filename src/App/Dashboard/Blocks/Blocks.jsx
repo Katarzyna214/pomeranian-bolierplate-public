@@ -1,7 +1,10 @@
 export const Blocks = () => {
   return (
     <div className="dashboard-tiles-container">
-      <h2>Hej tu Kasia!</h2>{' '}
+      <h2> Hej tu Kasia!</h2>{' '}
+      <p>
+        Poniżej znajdziesz najważniejsze informacje na temat mojej działalności
+      </p>
       <div className="dashboard-tiles">
         {' '}
         <div className="box1">
