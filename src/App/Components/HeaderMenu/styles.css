@@ -24,6 +24,7 @@ header .logo {
 }
 header .images-container {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-around;
 }

@@ -4,6 +4,7 @@ export const MyData = () => {
       <div className="person"></div>{' '}
       <p>
         <b className="mydataname">Katarzyna</b>{' '}
+        <p className="mydatainfo">Gorlice</p>
       </p>{' '}
     </div>
   );

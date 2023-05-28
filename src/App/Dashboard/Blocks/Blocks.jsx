@@ -7,7 +7,7 @@ export const Blocks = () => {
         <WavingHand className="wavingHand" /> Hej tu Kasia!
       </h2>{' '}
       <p className="dashboardpar1">
-        Poniżej znajdziesz najważniejsze informacje na temat mojej działalności
+        Poniżej znajdziesz najważniejsze informacje na temat mojej działalności.
       </p>
       <div className="dashboard-tiles">
         {' '}
