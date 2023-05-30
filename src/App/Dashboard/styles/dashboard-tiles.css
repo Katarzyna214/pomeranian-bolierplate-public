@@ -45,9 +45,7 @@
   text-align: center;
   margin: 0;
 }
-.dashboard-tiles > div p.dashboard-tile-description {
-  font-size: 0.8rem;
-}
+
 .dashboard-tiles > div a {
   font-size: 0.9rem;
   font-weight: bold;
@@ -64,6 +62,7 @@
 }
 .dashboard-tiles > div .dashboard-tile-title {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 .dashboard-tiles > div:hover .dashboard-tile-title {
   color: #fe3756;
@@ -73,8 +72,11 @@
   filter: invert(35%) sepia(57%) saturate(4589%) hue-rotate(331deg)
     brightness(101%) contrast(99%);
 }
-.dashboard-tiles .cvpar {
+.dashboard-tiles .dashboard-tile-description {
   color: black;
-  font-size: 12px;
-  margin-bottom: 1px;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.dashboard-tiles > div:hover .dashboard-tile-description {
+  color: #fe3756;
 }

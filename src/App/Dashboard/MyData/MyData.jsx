@@ -5,6 +5,10 @@ export const MyData = () => {
       <p>
         <b className="mydataname">Katarzyna</b>{' '}
         <p className="mydatainfo">Gorlice</p>
+        <p className="mydatainfo1">e-mail:</p>
+        <p className="mydatainfo2">katarzyna.mazur@pomeranianstartit.pl</p>
+        <p className="mydatainfo3">telefon:</p>
+        <p className="mydatainfo4">+48 567 891 890</p>
       </p>{' '}
     </div>
   );
