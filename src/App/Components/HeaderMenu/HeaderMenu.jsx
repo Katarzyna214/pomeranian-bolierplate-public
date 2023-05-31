@@ -15,7 +15,7 @@ export const HeaderMenu = () => {
       <SettingIcon />
       <div className="circular_image">
         {' '}
-        <img src="http://placekitten.com/500/500" />
+        <img src="http://placekitten.com/500/500" alt="kitten" />
       </div>
       <div className="name-surname-container">
         <h4>Katarzyna</h4>
