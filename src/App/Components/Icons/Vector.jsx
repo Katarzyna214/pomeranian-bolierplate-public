@@ -5,6 +5,7 @@ export function Vector({ className = '' }) {
       height="12"
       viewBox="0 0 7 12"
       fill="none"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

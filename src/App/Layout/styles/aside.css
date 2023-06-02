@@ -9,16 +9,64 @@ aside {
 
 aside ul {
   /* Nadpisanie domyślnych styli przeglądarki */
-  padding-inline-start: 1rem;
+  padding-inline-start: 1.5rem;
   list-style-type: none;
 }
 
 aside li {
+  position: relative;
   line-height: 2rem;
+}
+aside nav ul li .houseIcon {
+  position: absolute;
+  left: 0.1px;
+
+  top: -10px;
+  margin-left: 0.8%;
+}
+aside nav ul li .personalCardIcon {
+  position: absolute;
+  left: -0.1px;
+  bottom: 567px;
+  margin-left: 0.8%;
+}
+
+aside nav ul li .elementIcon {
+  position: absolute;
+  left: -0.1px;
+  bottom: 519px;
+  margin-left: 0.8%;
+}
+aside nav ul li .editIcon {
+  position: absolute;
+  left: -0.1px;
+  bottom: 472px;
+  margin-left: 0.8%;
+}
+
+aside nav ul li .calendarIcon {
+  position: absolute;
+  left: -0.1px;
+  bottom: 424px;
+  margin-left: 0.8%;
+}
+
+aside nav ul li .messageIcon {
+  position: absolute;
+  left: -0.1px;
+  bottom: 377px;
+  margin-left: 0.8%;
+}
+
+aside nav ul li .Icon {
+  position: absolute;
+  bottom: 12px;
+  left: -25px;
 }
 
 .aside-row {
   display: flex;
+  position: absolute;
   flex-direction: row;
   align-items: center;
 }

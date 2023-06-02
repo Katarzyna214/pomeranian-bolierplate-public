@@ -3,16 +3,30 @@
   padding-left: 2rem;
   margin-left: 2rem;
   color: #fe3756;
+  position: relative;
 }
+
 .dashboard .dashboard-tiles {
+  /* display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(2, 2fr); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-right: 5rem;
+  width: 1250px;
+  gap: 100px;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+.dashboard-tiles-container .wavingHand {
+  position: absolute;
+  left: 1px;
+  bottom: 4px;
 }
 .dashboard .dashboard-tiles > div {
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  margin-inline: 1px;
+  padding: 1rem;
   width: 15rem;
   height: 15rem;
   border-radius: 8px;
@@ -34,9 +48,7 @@
   text-align: center;
   margin: 0;
 }
-.dashboard-tiles > div p.dashboard-tile-description {
-  font-size: 0.8rem;
-}
+
 .dashboard-tiles > div a {
   font-size: 0.9rem;
   font-weight: bold;
@@ -53,6 +65,7 @@
 }
 .dashboard-tiles > div .dashboard-tile-title {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 .dashboard-tiles > div:hover .dashboard-tile-title {
   color: #fe3756;
@@ -62,8 +75,11 @@
   filter: invert(35%) sepia(57%) saturate(4589%) hue-rotate(331deg)
     brightness(101%) contrast(99%);
 }
-.dashboard-tiles .cvpar {
+.dashboard-tiles .dashboard-tile-description {
   color: black;
-  font-size: 12px;
-  margin-bottom: 1px;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.dashboard-tiles > div:hover .dashboard-tile-description {
+  color: #fe3756;
 }

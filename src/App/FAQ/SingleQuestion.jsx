@@ -16,13 +16,15 @@ export const SingleQuestion = (props) => {
   return (
     <div className="pierwszybox">
       <h2 className="naglowek2">{question}</h2>
-      <button
-        className={`button ${isVisible ? 'rotateButton' : ''}`}
-        onClick={clickHandler}
-      >
-        {' '}
-        <Vector />{' '}
-      </button>
+      <div className="nonebutton">
+        <button
+          className={`button ${isVisible ? 'rotateButton' : ''}`}
+          onClick={clickHandler}
+        >
+          {' '}
+          <Vector className="button1" />{' '}
+        </button>
+      </div>
       <hr className="hr" />
       <p className="par2">{isVisible && answear}</p>
     </div>
