@@ -1,8 +1,9 @@
 import './GameView.css';
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
+import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
-export const GameView = ({}) => {
+export const GameView = ({ setGameStarted, score, setScore }) => {
   return (
     <>
       <Menu label="CZAS DO KOŃCA">
@@ -10,11 +11,18 @@ export const GameView = ({}) => {
       </Menu>
 
       <Menu label="WYNIK">
-        <div className="value-field">{2}</div>
+        <div className="value-field">{score}</div>
       </Menu>
 
       <Menu label="PRZYCISKI STREUJĄCE">
-        <Button onClick={() => {}}>Stop</Button>
+        <Button
+          onClick={() => {
+            setGameStarted(false);
+            setScore(0);
+          }}
+        >
+          Stop
+        </Button>
       </Menu>
     </>
   );

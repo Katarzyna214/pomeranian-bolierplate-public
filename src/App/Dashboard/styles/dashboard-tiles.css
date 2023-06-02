@@ -7,13 +7,16 @@
 }
 
 .dashboard .dashboard-tiles {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: repeat(2, 2fr);
-  /* display: flex;
+  grid-template-rows: repeat(2, 2fr); */
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap; */
-  gap: 1px;
+  flex-wrap: wrap;
+  width: 1250px;
+  gap: 100px;
+  margin-left: 80px;
+  margin-top: 50px;
 }
 .dashboard-tiles-container .wavingHand {
   position: absolute;
