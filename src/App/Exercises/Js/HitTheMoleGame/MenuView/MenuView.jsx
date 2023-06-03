@@ -3,9 +3,14 @@ import { Menu } from '../Menu/Menu';
 import { Button } from '../Button/Button';
 import { SelectButtons } from '../SelectButtons/SelectButtons';
 
-export const MenuView = ({ setGameStarted }) => {
+export const MenuView = ({ setGameStarted, score, isGameEnded }) => {
   return (
     <>
+      {isGameEnded && (
+        <div>
+          Gratulacje! Twój wynik to {score} złapane krety w czasie 1 minuty!
+        </div>
+      )}
       <Menu label="CZAS GRY">
         <SelectButtons
           options={[
@@ -48,7 +53,6 @@ export const MenuView = ({ setGameStarted }) => {
           ]}
         />
       </Menu>
-
       <Menu label="PRZYCISKI STERUJĄCE">
         <Button onClick={() => setGameStarted(true)}>START</Button>
       </Menu>

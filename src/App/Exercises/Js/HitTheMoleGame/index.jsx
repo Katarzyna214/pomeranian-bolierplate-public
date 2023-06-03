@@ -6,7 +6,7 @@ import { MenuView } from './MenuView/MenuView';
 
 export function HitTheMole() {
   const [isGameStarted, setGameStarted] = useState(false);
-
+  const [isGameEnded, setGameEnded] = useState(false);
   const [score, setScore] = useState(0);
 
   return (
@@ -23,10 +23,14 @@ export function HitTheMole() {
           setScore={setScore}
         />
       ) : (
-        <MenuView score={score} setGameStarted={setGameStarted} />
+        <MenuView
+          isGameEnded={isGameEnded}
+          score={score}
+          setGameStarted={setGameStarted}
+        />
       )}
-
       {isGameStarted && <PlayGround score={score} setScore={setScore} />}
+      {/* {isGameEnded && <MenuView isGameEnded={isGameEnded} />} */}
     </div>
   );
 }
