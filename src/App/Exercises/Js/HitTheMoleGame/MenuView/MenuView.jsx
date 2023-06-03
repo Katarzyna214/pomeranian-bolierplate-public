@@ -36,12 +36,12 @@ export const MenuView = ({ setGameStarted }) => {
               value: 1,
             },
             {
-              label: '2 kretyy',
+              label: '2 krety',
               isActive: false,
               value: 2,
             },
             {
-              label: '3 kretyy',
+              label: '3 krety',
               isActive: false,
               value: 3,
             },
