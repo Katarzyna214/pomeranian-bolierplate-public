@@ -2,12 +2,28 @@ import './GameView.css';
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
+import { useEffect, useState } from 'react';
+import { Result } from '../ResultView/ResultView';
 
-export const GameView = ({ setGameStarted, score, setScore }) => {
+export const GameView = ({
+  setGameStarted,
+  score,
+  setScore,
+  setTime,
+  time,
+  setIsGameStopped,
+}) => {
+  useEffect(() => {
+    const timeoutID = setTimeout(() => {
+      time > 0 && setTime(time - 1);
+    }, 1000);
+    return () => clearTimeout(timeoutID); //remove timeout on component unmount
+  }, [time]);
+
   return (
     <>
       <Menu label="CZAS DO KOŃCA">
-        <div className="value-field">[czasss]</div>
+        <div className="value-field">{time}</div>
       </Menu>
 
       <Menu label="WYNIK">
@@ -18,7 +34,7 @@ export const GameView = ({ setGameStarted, score, setScore }) => {
         <Button
           onClick={() => {
             setGameStarted(false);
-            setScore(0);
+            setIsGameStopped(true);
           }}
         >
           Stop

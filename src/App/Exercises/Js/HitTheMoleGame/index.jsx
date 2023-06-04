@@ -1,17 +1,26 @@
 import './styles.css';
-import { Menu } from './Menu/Menu';
-import { Button } from './Button/Button';
+
+import { useEffect } from 'react';
+
 import { GameView } from './GameView/GameView';
 import { PlayGround } from './PlayGround/PlayGround';
 import { useState } from 'react';
+import { MenuView } from './MenuView/MenuView';
 
 export function HitTheMole() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);
+  const [time, setTime] = useState(60);
+  const [initialTime, setInitialTime] = useState(60);
+  const [isGameStopped, setIsGameStopped] = useState(false);
+
+  useEffect(() => {
+    time === 0 && setGameStarted(false);
+  }, [time]);
 
   return (
     <div className="main_hit_the_mole">
-      <h4>HIT THE MOLE GAME</h4>
+      <h2>HIT THE MOLE GAME</h2>
       <p className="hit_the_mole_par">
         Gra polegająca na podążaniu za krecikiem i trafieniu na kwadrat, w
         którym się pojawił.{' '}
@@ -21,28 +30,23 @@ export function HitTheMole() {
           setGameStarted={setGameStarted}
           score={score}
           setScore={setScore}
+          time={time}
+          setTime={setTime}
+          isGameStarted={isGameStarted}
+          setIsGameStopped={setIsGameStopped}
         />
       ) : (
-        <>
-          <Menu label="CZAS GRY">
-            <Button isActive={true}>1 minuta</Button>
-            <Button>2 minuty</Button>
-            <Button>3 minuty</Button>
-          </Menu>
-          <Menu label="LICZBA KRETÓW">
-            <Button isActive>1 kret</Button>
-            <Button>2 krety</Button>
-            <Button>3 krety</Button>
-          </Menu>
-
-          <Menu label="PRZYCISKI STERUJĄCE">
-            <Button onClick={() => setGameStarted(true)}>START</Button>
-          </Menu>
-        </>
+        <MenuView
+          time={time}
+          initialTime={initialTime}
+          score={score}
+          setGameStarted={setGameStarted}
+          setTime={setTime}
+          setInitialTime={setInitialTime}
+          setScore={setScore}
+          isGameStopped={isGameStopped}
+        />
       )}
-
-      {/* <ResultView result={result} /> */}
-
       {isGameStarted && <PlayGround score={score} setScore={setScore} />}
     </div>
   );
