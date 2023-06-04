@@ -2,17 +2,27 @@ import './MenuView.css';
 import { Menu } from '../Menu/Menu';
 import { Button } from '../Button/Button';
 import { SelectButtons } from '../SelectButtons/SelectButtons';
+import { Result } from '../ResultView/ResultView';
 
-export const MenuView = ({ setGameStarted, score, isGameEnded }) => {
+export const MenuView = ({
+  setGameStarted,
+  setTime,
+  setInitialTime,
+  time,
+  initialTime,
+  score,
+  setScore,
+  isGameStopped,
+}) => {
   return (
     <>
-      {isGameEnded && (
-        <div>
-          Gratulacje! Twój wynik to {score} złapane krety w czasie 1 minuty!
-        </div>
+      {(time === 0 || isGameStopped) && (
+        <Result score={score} resultTime={initialTime - time} />
       )}
       <Menu label="CZAS GRY">
         <SelectButtons
+          setOptionChosen={setTime}
+          setInitialTime={setInitialTime}
           options={[
             {
               label: '1 minuta',
@@ -54,7 +64,14 @@ export const MenuView = ({ setGameStarted, score, isGameEnded }) => {
         />
       </Menu>
       <Menu label="PRZYCISKI STERUJĄCE">
-        <Button onClick={() => setGameStarted(true)}>START</Button>
+        <Button
+          onClick={() => {
+            setGameStarted(true);
+            setScore(0);
+          }}
+        >
+          START
+        </Button>
       </Menu>
     </>
   );
