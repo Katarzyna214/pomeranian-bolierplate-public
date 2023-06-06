@@ -1,0 +1,33 @@
+.board_view_main_field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  width: 500px;
+  height: 700px;
+  flex-wrap: wrap;
+}
+.field {
+  width: 160px;
+  height: 160px;
+  background: #ebebeb;
+  border-radius: 8px;
+  left: calc(50% - 160px / 2);
+  top: calc(50% - 121px / 2 - 16.5px);
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 150px;
+  text-align: center;
+
+  color: #000000;
+}
+.green-field {
+  background: #e2fbd7;
+}
+.red-field {
+  background: #f3aea8;
+}
