@@ -83,10 +83,10 @@ const fields = [
     label: 'U',
   },
 ];
-export const BoardView = ({}) => {
-  const handleClick = (hasClicked) => {
+export const BoardView = ({ fields }) => {
+  const handleClick = (hasClicked, fields, id) => {
     {
-      hasClicked = true ? 'green-field' : 'red-field';
+      fields.id = true ? 'green-field' : 'red-field';
     }
   };
   return (
@@ -96,7 +96,7 @@ export const BoardView = ({}) => {
           <div
             className="field"
             key={fields.id}
-            onClick={() => handleClick(fields)}
+            onClick={() => handleClick(hasClicked)}
           >
             {label}
           </div>
