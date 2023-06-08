@@ -5,7 +5,7 @@ import { GameView } from './GameView/GameView';
 import { BoardView } from './BoardView/BoardView';
 
 export function MemoryGame() {
-  const [isGameStarted, setGameStarted] = useState(false);
+  const [isGameStartedMemo, setGameStartedMemo] = useState(false);
 
   return (
     <div className="main_memory_game">
@@ -13,16 +13,16 @@ export function MemoryGame() {
       <p className="memory_game_par">
         Gra polegająca na zapamiętywaniu odkrytych kafli i łączeniu ich w pary.{' '}
       </p>
-      {isGameStarted ? (
+      {isGameStartedMemo ? (
         <GameView
-          setGameStarted={setGameStarted}
-          isGameStarted={isGameStarted}
+          setGameStartedMemo={setGameStartedMemo}
+          // isGameStartedMemo={isGameStartedMemo}
         />
       ) : (
-        <MenuView setGameStarted={setGameStarted} />
+        <MenuView setGameStartedMemo={setGameStartedMemo} />
       )}
 
-      {isGameStarted && <BoardView />}
+      {isGameStartedMemo && <BoardView />}
     </div>
   );
 }

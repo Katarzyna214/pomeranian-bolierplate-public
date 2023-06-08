@@ -1,7 +1,7 @@
 import './BoardView.css';
 import { useState } from 'react';
 
-const fields = [
+const boardFields = [
   {
     id: 1,
     hasClicked: false,
@@ -83,22 +83,30 @@ const fields = [
     label: 'U',
   },
 ];
-export const BoardView = ({ fields }) => {
-  const handleClick = (hasClicked, fields, id) => {
-    {
-      fields.id = true ? 'green-field' : 'red-field';
-    }
+export const BoardView = ({}) => {
+  const [cards, setCards] = useState(boardFields);
+
+  const handleClick = (boardFieldClicked) => {
+    setCards(
+      cards.map((card) => {
+        return {
+          ...card,
+          hasClicked: card.id === boardFieldClicked.id,
+        };
+      })
+    );
   };
   return (
     <div className="board_view_main_field">
-      {fields.map(({ id, hasClicked, label }) => {
+      {cards.map((card) => {
         return (
           <div
-            className="field"
-            key={fields.id}
-            onClick={() => handleClick(hasClicked)}
+            className={`field ${card.hasClicked ? `green-field` : ''}`}
+            key={card.id}
+            onClick={() => handleClick(card)}
           >
-            {label}
+            {' '}
+            {card.hasClicked ? card.label : ''}
           </div>
         );
       })}

@@ -2,7 +2,7 @@ import './MenuView.css';
 import { Menu } from '../Menu/Menu';
 import { Button } from '../Button/Button';
 
-export const MenuView = (setGameStarted) => {
+export const MenuView = ({ setGameStartedMemo }) => {
   return (
     <>
       <Menu label="LICZBA ELEMENTÓW">
@@ -13,7 +13,7 @@ export const MenuView = (setGameStarted) => {
       <Menu label="PRZYCISKI STERUJĄCE">
         <Button
           onClick={() => {
-            setGameStarted(true);
+            setGameStartedMemo(true);
           }}
         >
           START

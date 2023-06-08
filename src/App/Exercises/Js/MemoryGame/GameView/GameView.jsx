@@ -4,18 +4,18 @@ import { Menu } from '../Menu/Menu';
 import { useEffect, useState } from 'react';
 import { isDisabled } from '@testing-library/user-event/dist/utils';
 
-export const GameView = ({ setGameStarted }) => {
-  const [time, setTime] = useState(0);
+export const GameView = ({ setGameStartedMemo }) => {
+  const [time1, setTime1] = useState(0);
   useEffect(() => {
-    const timeoutID = setTimeout(() => {
-      time >= 0 && setTime(time + 1);
+    const timeoutID1 = setTimeout(() => {
+      time1 >= 0 && setTime1(time1 + 1);
     }, 1000);
-    return () => clearTimeout(timeoutID); //remove timeout on component unmount
-  }, [time]);
+    return () => clearTimeout(timeoutID1); //remove timeout on component unmount
+  }, [time1]);
   return (
     <>
       <Menu label="CZAS GRY">
-        <Button isDisabled={true}>{time}</Button>
+        <Button isDisabled={true}>{time1}</Button>
       </Menu>
       <Menu label="LICZBA RUCHÓW">
         <Button isDisabled={true}>2</Button>
@@ -23,7 +23,7 @@ export const GameView = ({ setGameStarted }) => {
       <Menu label="PRZYCISKI STERUJĄCE">
         <Button
           onClick={() => {
-            setGameStarted(false);
+            setGameStartedMemo(false);
             // setScore(0);
           }}
         >
