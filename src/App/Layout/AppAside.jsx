@@ -37,6 +37,7 @@ export function AppAside() {
             <MessagesIcon className="Icon" />
             <NavLink to="faq">FAQ</NavLink>
           </li>
+          <hr/>
           <li>
             <SettingIcon className="Icon" />
             <NavLink to="settings">Ustawienia</NavLink>

@@ -1,0 +1,8 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+/* .red-button:hover {
+  background-color: red;
+  cursor: pointer;
+} */
