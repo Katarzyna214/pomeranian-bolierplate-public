@@ -1,0 +1,79 @@
+.font-test-family {
+  font-family: Chilanka;
+}
+/* .variable-string-placeholder p span */
+.variable-string-placeholder {
+  margin-left: 5px;
+}
+.nick {
+  width: 600px;
+height: 27px;
+
+/* body/bold-16 */
+display: flex;
+flex-direction: row;
+/* position: relative; */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height, or 169% */
+
+
+/* TEXT/text.primary */
+
+color: #222222;
+
+}
+.button {
+  box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 36px;
+gap: 16px;
+
+width: 163px;
+height: 56px;
+
+/* primary/primary */
+
+background: #FE3756;
+/* primary/primary */
+
+border: 1px solid #FE3756;
+border-radius: 8px;
+}
+.input-nick {
+  box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 13px 16px;
+gap: 10px;
+
+width: 285px;
+height: 48px;
+
+background: #FFFFFF;
+/* GREY/300 */
+
+border: 1px solid #C8CBD1;
+border-radius: 5px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* position: absolute; */
+}
