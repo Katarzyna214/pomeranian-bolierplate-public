@@ -12,7 +12,7 @@ function shuffleArray(s) {
 const alpha = Array.from(Array(26)).map((e, i) => i + 65); //listy na bazie liczby
 const alphabet = alpha.map((x) => String.fromCharCode(x));
 const getRandomLetters = (amount) => {
-  const shuffled = [...alphabet].sort(() => 0.5 - Math.random());
+  const shuffled = [...alphabet].sort(() => 0.5 - Math.random()); //nie dziala jak powinno bo to robi shuffleArray
   return shuffled.slice(0, amount);
 };
 
@@ -30,13 +30,13 @@ function generateBoard(size) {
     return { ...obj, id: index + 1 };
   });
 }
-export const BoardView = ({ boardSize }) => {
+export const BoardView = ({ boardSize, amount, setAmount, setGameEndedMemo, time, setTime, setMyTime, isGameEndedMemo, setGameStartedMemo }) => {
   const [firstClickedFieldId, setFirstClickedFieldId] = useState();
   const [secondClickedFieldId, setSecondClickedFieldId] = useState();
-  const [board, setBoard] = useState(generateBoard(16));
+  const [board, setBoard] = useState(generateBoard(boardSize));
   const handleClick = (object) => {
     const isFirstClickedSetAndIsDifferentThanPrev =
-      firstClickedFieldId && firstClickedFieldId != object.id;
+      firstClickedFieldId && firstClickedFieldId !== object.id;
     if (isFirstClickedSetAndIsDifferentThanPrev) {
       setSecondClickedFieldId(object.id);
       resetSecondClickedFieldId();
@@ -49,37 +49,51 @@ export const BoardView = ({ boardSize }) => {
   const resetFirstClickedFieldId = () => {
     setTimeout(() => {
       setFirstClickedFieldId(undefined);
-    }, 5000);
+    }, 1000);
   };
+
   const resetSecondClickedFieldId = () => {
     setTimeout(() => {
       setSecondClickedFieldId(undefined);
     }, 1000);
   };
+
   useEffect(() => {
     if (firstClickedFieldId && secondClickedFieldId) {
+      setAmount(amount+1)
       const firstClickedFieldValue = board.find(
         (item) => item.id === firstClickedFieldId
-      );
+      ).value;
       const secondClickedFieldValue = board.find(
         (item) => item.id === secondClickedFieldId
-      );
+      ).value;
       if (firstClickedFieldValue === secondClickedFieldValue) {
         setBoard(
           board.map((field) => {
-            const isClickedFieldPaired =
-              field.id === firstClickedFieldId ||
-              field.id === secondClickedFieldId;
+            // const isClickedFieldPaired =
+            //   field.id === firstClickedFieldId ||
+            //   field.id === secondClickedFieldId;
             return {
               ...field,
-              isPaired: field.isPaired ? true : isClickedFieldPaired,
+              isPaired: field.isPaired ? true : firstClickedFieldId === field.id || secondClickedFieldId ===field.id,
             };
           })
         );
       }
     }
   }, [firstClickedFieldId, secondClickedFieldId]);
-  console.log(board);
+
+  useEffect(()=>{
+    if (board.find(item=>item.isPaired===false)) {
+      setGameEndedMemo(false)
+      setMyTime(0)
+    } else {
+      setMyTime(time);
+      setGameEndedMemo(true);
+      setGameStartedMemo(false)
+    }
+  }, [board])
+
   return (
     <div className="board_view_main_field">
       {board.map((element) => {
@@ -89,6 +103,7 @@ export const BoardView = ({ boardSize }) => {
         const canShowValue = isClicked || element.isPaired;
         const clickedFliedClassName = isClicked ? 'field-clicked' : '';
         const pairedFieldClassName = element.isPaired ? 'green-field' : '';
+        
         return (
           <div
             className={`field ${clickedFliedClassName} ${pairedFieldClassName}`}
