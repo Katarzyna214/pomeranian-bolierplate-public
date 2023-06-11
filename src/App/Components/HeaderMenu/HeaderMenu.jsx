@@ -3,6 +3,7 @@ import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
 import { RightCornerMenuPopup } from '../RighCornerMenuPopup/RightCornerMenuPopup';
 import { useState } from 'react';
+import { ReactComponent as MyPhoto1 } from '../../Images/Myphoto1.jpg';
 
 export const HeaderMenu = () => {
   const [isVisible, setVisibility] = useState(false);
