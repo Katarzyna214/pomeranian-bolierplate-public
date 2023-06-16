@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles.css';
 import { useEffect } from 'react';
+import { ApiSymulationSuccess } from './ApiSymulationSuccess/ApiSymulationSuccess';
 
 export function JsPromisesExercise({ parameterToEffect }) {
   // const [getState, setState] = useState(null);
@@ -46,5 +47,10 @@ export function JsPromisesExercise({ parameterToEffect }) {
   });
   logPromiseState(myPromise);
 
-  return <div className="playing-with-js-promises"> Test </div>;
+  return (
+    <div className="playing-with-js-promises">
+      {' '}
+      <ApiSymulationSuccess />{' '}
+    </div>
+  );
 }
