@@ -8,8 +8,8 @@ import { Exercises } from './App/Exercises';
 import { CV } from './App/CV';
 import { Calendar } from './App/Calendar';
 import { Settings } from './App/Settings';
-import {FAQ} from './App/FAQ';
-import {TechStack} from './App/Components/TechStack/TechStack';
+import { FAQ } from './App/FAQ';
+import { TechStack } from './App/Components/TechStack/TechStack';
 
 export function App() {
   return (
