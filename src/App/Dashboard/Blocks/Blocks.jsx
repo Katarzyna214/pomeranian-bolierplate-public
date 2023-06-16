@@ -54,8 +54,8 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">
             {' '}
             Stack technologiczny realizowany na kursie{' '}
+            {/* <SeeMoreLink to="tech-stack" />{' '} */}
           </p>{' '}
-          {/* <SeeMoreLink to="tech-stack" /> */}{' '}
         </div>{' '}
         <div>
           {' '}
