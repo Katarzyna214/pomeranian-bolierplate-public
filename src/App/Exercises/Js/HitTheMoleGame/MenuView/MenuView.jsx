@@ -68,7 +68,6 @@ export const MenuView = ({
           onClick={() => {
             setGameStarted(true);
             setScore(0);
-            setTimeout(0);
           }}
         >
           START
