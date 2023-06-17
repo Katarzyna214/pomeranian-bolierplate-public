@@ -26,13 +26,13 @@
 }
 
 .field svg {
-  margin-bottom: -64px;
+  margin-bottom: -20px;
 }
 
-.field-green {
+.playground .field-green {
   background-color: greenyellow;
 }
 
-.field-red {
+.playground .field-red {
   background-color: red;
 }

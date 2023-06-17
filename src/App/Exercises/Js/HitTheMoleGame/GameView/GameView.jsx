@@ -30,7 +30,7 @@ export const GameView = ({
         <div className="value-field">{score}</div>
       </Menu>
 
-      <Menu label="PRZYCISKI STREUJĄCE">
+      <Menu label="PRZYCISKI STERUJĄCE">
         <Button
           onClick={() => {
             setGameStarted(false);
