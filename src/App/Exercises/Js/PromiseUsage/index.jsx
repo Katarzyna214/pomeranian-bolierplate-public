@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 export function PromiseUsage() {
   const [data, setData] = useState();
-  const [category, setCategory] = useState();
   const getJokes = async () => {
     //daje async zeby pokazac ze oczekuje na promisa na jakies info z serwera
     try {
