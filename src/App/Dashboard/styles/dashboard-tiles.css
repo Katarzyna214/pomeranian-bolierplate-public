@@ -5,7 +5,23 @@
   color: #fe3756;
   position: relative;
 }
-
+.dashboard-tiles-container .wavingHand {
+  animation-name: swing;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .dashboard .dashboard-tiles {
   /* display: grid;
   grid-template-columns: repeat(3, 2fr);
