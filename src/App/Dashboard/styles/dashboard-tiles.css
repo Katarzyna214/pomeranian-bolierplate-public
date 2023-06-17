@@ -7,7 +7,7 @@
 }
 .dashboard-tiles-container .wavingHand {
   animation-name: swing;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
