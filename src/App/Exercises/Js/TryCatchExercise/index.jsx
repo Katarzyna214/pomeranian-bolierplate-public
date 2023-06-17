@@ -8,7 +8,7 @@ export function Exercise() {
     const parsedValue = Number.parseInt(value);
 
     if (isNaN(parsedValue)) {
-      throw 'Input nie jest liczbą!';
+      throw 'Input nie jest liczbą!'; //throw odpowiedzialny za wyrzucenie bedu
     }
   };
   const validate = (valueToValidate) => {
