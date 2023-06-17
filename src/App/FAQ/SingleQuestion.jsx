@@ -18,7 +18,7 @@ export const SingleQuestion = (props) => {
       <h2 className="naglowek2">{question}</h2>
       <div className="nonebutton">
         <button
-          className={`button ${isVisible ? 'rotateButton' : ''}`}
+          className={`button1 ${isVisible ? 'rotateButton' : ''}`}
           onClick={clickHandler}
         >
           {' '}
