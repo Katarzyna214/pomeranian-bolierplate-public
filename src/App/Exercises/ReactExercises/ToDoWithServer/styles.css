@@ -1,0 +1,23 @@
+.font-test-family {
+  font-family: Chilanka;
+}
+/* .variable-string-placeholder p span */
+.variable-string-placeholder {
+  margin-left: 5px;
+}
+
+.todopar {
+  width: 278px;
+  height: 27px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #222222;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
