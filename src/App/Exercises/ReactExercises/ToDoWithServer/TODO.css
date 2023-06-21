@@ -73,3 +73,19 @@
   left: 480px;
   bottom: 90px;
 }
+.delelement {
+  border-color: none;
+  background-color: none;
+  position: relative;
+  left: 520px;
+  top: -70px;
+}
+button:hover {
+  cursor: pointer;
+  color: red;
+}
+.delpar {
+  color: red;
+  position: relative;
+  left: 450px;
+}
