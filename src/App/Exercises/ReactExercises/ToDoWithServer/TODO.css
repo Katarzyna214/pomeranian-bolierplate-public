@@ -74,11 +74,12 @@
   bottom: 90px;
 }
 .delelement {
-  border-color: none;
+  border-color: white;
   background-color: none;
   position: relative;
   left: 520px;
   top: -70px;
+  background-color: white;
 }
 button:hover {
   cursor: pointer;

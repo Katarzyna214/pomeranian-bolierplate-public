@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './styles.css';
 import { useState } from 'react';
 import { ToDoElement } from './TODO';
+import { AddToDo } from './AddToDo';
 
 const API_URL = 'http://localhost:3333/api';
 export function ToDoWithServer() {
@@ -30,29 +31,6 @@ export function ToDoWithServer() {
     }
   };
 
-  // const data = [
-  //   {
-  //     id: 8,
-  //     title: 'Todo 8',
-  //     note: 'cokolwiek',
-  //     author: 'Anonymous1',
-  //     isDone: false,
-  //   },
-  //   {
-  //     id: 9,
-  //     title: 'Todo 9',
-  //     note: 'cokolwiek2',
-  //     author: 'Anonymous2',
-  //     isDone: false,
-  //   },
-  //   {
-  //     id: 10,
-  //     title: 'Todo 10',
-  //     note: 'cokolwiek3',
-  //     author: 'Anonymous3',
-  //     isDone: false,
-  //   },
-  // ];
   useEffect(() => {
     console.log(errorList, 'newerrorListuseEffect');
   }, [errorList]);
@@ -75,6 +53,7 @@ export function ToDoWithServer() {
           />
         );
       })}
+      <AddToDo />
     </div>
   );
 }

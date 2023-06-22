@@ -1,0 +1,21 @@
+.addtodopar {
+  font-family: 'Poppins';
+  font-size: 16px;
+  line-height: 27px;
+}
+.label {
+  font-family: 'Poppins';
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 700;
+}
+.form {
+  width: 100px;
+}
+.input {
+  border-color: white;
+  border-radius: 5%;
+  height: 35px;
+  width: 250px;
+  background-color: white;
+}
