@@ -21,3 +21,16 @@
   order: 0;
   flex-grow: 0;
 }
+.button-add-addtask {
+  /* position: absolute; */
+  left: 1px;
+  bottom: -30px;
+  width: 163px;
+  height: 56px;
+  background-color: #fe3756;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  /* margin-left: 53px; */
+}

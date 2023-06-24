@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './TODO.css';
 import { useState } from 'react';
+import { parseDate } from '../helpers';
 
 export const ToDoElement = ({
   name,
@@ -15,8 +16,8 @@ export const ToDoElement = ({
   isDone,
   doneDate,
 }) => {
-  const parsedDate = new Date(doneDate);
-  const finalDate = `${parsedDate.getDate()}.${parsedDate.getMonth()}.${parsedDate.getFullYear()}, ${parsedDate.getHours()}:${parsedDate.getMinutes()}`;
+  // const parsedDate = new Date(doneDate);
+  // const finalDate = `${parsedDate.getDate()}.${parsedDate.getMonth()}.${parsedDate.getFullYear()}, ${parsedDate.getHours()}:${parsedDate.getMinutes()}`;
 
   return (
     <div className="proba">
@@ -25,7 +26,7 @@ export const ToDoElement = ({
           <div>
             <p className="boxpar">{title}</p>
             <p className="name_date">{author}</p>
-            {/* <p className="name_date">{name}</p> */}
+            <p className="name_date">{name}</p>
             <p className="parinfo">{note}</p>
             {isError && <p className="delpar">nie udało się usunąć</p>}
             <button className="delelement" onClick={() => deleteToDo(id)}>
@@ -44,7 +45,7 @@ export const ToDoElement = ({
                 Zakończ
               </button>
             )}
-            {isDone && <p>Zakończone {finalDate}</p>}
+            {isDone && <p>Zakończone {parseDate(doneDate)}</p>}
           </div>
         </div>
       </div>

@@ -2,20 +2,28 @@
 
 .add-task-page {
   font-family: 'Poppins', sans-serif;
-  position: relative;
-  height: max-content;
-  margin-bottom: 50px;
+}
+
+.add-task-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
 }
 .add-task-label {
   font-weight: 600;
+  margin-bottom: -10px;
 }
 
 .add-task-input {
   font-size: 16px;
   width: 500px;
   height: 50px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: -10px;
   border-radius: 8px;
   border: 1px solid rgb(176, 176, 176);
   padding: 5px;
@@ -23,10 +31,10 @@
 
 .text-area {
   height: 100px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .button-delete-addtask {
-  position: absolute;
   width: 163px;
   height: 56px;
   background-color: #000000;
@@ -34,15 +42,13 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  bottom: -30px;
-  left: 15rem;
-  /* margin-left: 120px; */
+  margin-left: 53px;
+
+  /* margin-left: 240px;
+  margin-top: 50px; */
 }
 
 .button-add-addtask {
-  position: absolute;
-  left: 1px;
-  bottom: -30px;
   width: 163px;
   height: 56px;
   background-color: #fe3756;
@@ -50,9 +56,14 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  /* margin-left: 53px; */
+  margin-left: 53px;
 }
-form {
-  position: relative;
-  height: max-content;
+.blad {
+  color: #fe3756;
+  font-size: small;
+}
+.threebuttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
 }

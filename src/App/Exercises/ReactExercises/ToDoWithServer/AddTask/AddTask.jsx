@@ -1,24 +1,56 @@
 import { useEffect, useState } from 'react';
 import './AddTask.css';
 import { FORM_SCHEMA, API_URL } from '../constants';
+import { requestHandler } from '../helpers';
 
-export function AddTask({ getData, formData, setFormData, isEdited }) {
+export function AddTask({
+  getData,
+  formData,
+  setFormData,
+  isEdited,
+  setIsForm,
+  setIsEdited,
+}) {
+  const [isError, setIsError] = useState(false);
+
   const handleChange = (e, name) => {
     const { value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
   const handleSendData = () => {
-    console.log('wywoluje sie handlesenddata', formData);
-    fetch(`${API_URL}/todo${isEdited ? `/${formData.id}` : ''}`, {
-      method: isEdited ? 'PUT' : 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    }).then(() => {
-      setFormData(FORM_SCHEMA);
-      getData();
-    });
+    const method = isEdited ? 'PUT' : 'POST';
+    const id = isEdited ? formData.id : null;
+    requestHandler(method, id, formData)
+      .then(() => {
+        setFormData(FORM_SCHEMA);
+        getData();
+        setIsForm(false);
+        isEdited && setIsEdited(false);
+      })
+      .catch((jsonError) => {
+        setIsError(true);
+      });
+
+    // console.log('wywoluje sie handlesenddata', formData);
+    // fetch(`${API_URL}/todo${isEdited ? `/${formData.id}` : ''}`, {
+    //   method: isEdited ? 'PUT' : 'POST',
+    //   headers: {
+    //     'Content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify(formData),
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error(response);
+    //     }
+    //     setFormData(FORM_SCHEMA);
+    //     getData();
+    //     setIsForm(false);
+    //     isEdited && setIsEdited(false);
+    //   })
+    //   .catch(() => {
+    //     setIsError(true);
+    //   });
   };
 
   const handleSubmit = (e) => {
@@ -28,6 +60,12 @@ export function AddTask({ getData, formData, setFormData, isEdited }) {
   useEffect(() => {
     console.log('formData', formData);
   }, [formData]);
+
+  const handleBack = () => {
+    setFormData(FORM_SCHEMA);
+    setIsForm(false);
+    setIsEdited(false);
+  };
 
   return (
     <div className="add-task-page">
@@ -76,17 +114,22 @@ export function AddTask({ getData, formData, setFormData, isEdited }) {
           onChange={(e) => handleChange(e, 'note')}
           placeholder="Zmierzyć ile mamy miejsca na balkonie od barierki do kanapy i ile musi mieć max średnicy - miarka!!"
         ></textarea>
-        <button className="button-delete-addtask">COFNIJ</button>
-        {!isEdited && (
-          <button type="submit" className="button-add-addtask">
-            DODAJ
+        {isError && <p className="blad">Wystąpił błąd, spróbuj ponownie.</p>}
+        <div className="threebuttons">
+          <button className="button-delete-addtask" onClick={handleBack}>
+            COFNIJ
           </button>
-        )}
-        {isEdited && (
-          <button type="submit" className="button-add-addtask">
-            EDYTUJ
-          </button>
-        )}
+          {!isEdited && (
+            <button type="submit" className="button-add-addtask">
+              DODAJ
+            </button>
+          )}
+          {isEdited && (
+            <button type="submit" className="button-add-addtask">
+              EDYTUJ
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
