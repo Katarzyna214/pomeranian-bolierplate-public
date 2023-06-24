@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 import './TODO.css';
 import { useState } from 'react';
 import { parseDate } from '../helpers';
+import { EditIcon } from '../../../../Components/Icons/EditIcon';
+import { GreyTickIcon } from '../../../../Components/Icons/GreyTickIcon';
+import { ReactComponent as TrashIcon } from '../../../../Components/Icons/trash.svg';
 
 export const ToDoElement = ({
   name,
@@ -30,10 +33,10 @@ export const ToDoElement = ({
             <p className="parinfo">{note}</p>
             {isError && <p className="delpar">nie udało się usunąć</p>}
             <button className="delelement" onClick={() => deleteToDo(id)}>
-              Usuń
+              <TrashIcon />
             </button>
             <button className="delelement" onClick={() => handleEditTask(id)}>
-              Edytuj
+              <EditIcon />
             </button>
             {!isDone && (
               <button
@@ -42,7 +45,7 @@ export const ToDoElement = ({
                   markAsDone(id);
                 }}
               >
-                Zakończ
+                <GreyTickIcon />
               </button>
             )}
             {isDone && <p>Zakończone {parseDate(doneDate)}</p>}
