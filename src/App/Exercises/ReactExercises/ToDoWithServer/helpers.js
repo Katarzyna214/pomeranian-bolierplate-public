@@ -20,6 +20,9 @@ let endOfUrl = '';
 if(id){
   endOfUrl=`/${id}`
 }
+if(id && selectedMethod ==='PUT' && !!data){
+  endOfUrl =`${endOfUrl}/markAsDone`
+}
 const response = await fetch(`${API_URL}/todo${endOfUrl}`, {
   method: selectedMethod,
   headers: {
@@ -28,9 +31,14 @@ const response = await fetch(`${API_URL}/todo${endOfUrl}`, {
   body: JSON.stringify(data),
 })
 const jsonResponse = await response.json()
-if(response.status===200){
+
+
+
+if(response.status===200) {
   resolve(jsonResponse)
-}else {
+}
+
+if(response.status !==200 && jsonResponse.message) {
   reject(jsonResponse)
 }
 })

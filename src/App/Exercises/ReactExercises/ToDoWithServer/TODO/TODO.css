@@ -91,10 +91,3 @@ button:hover {
   bottom: -20px;
   left: 430px;
 }
-.isClickedIcon:hover {
-  color: red;
-  cursor: pointer;
-}
-.isClickedIcon {
-  color: red;
-}

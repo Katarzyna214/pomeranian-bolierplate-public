@@ -4,7 +4,6 @@
   align-items: center;
   padding: 8px 0px;
   gap: 6px;
-  isolation: isolate;
   position: absolute;
   width: 400px;
   height: 130px;

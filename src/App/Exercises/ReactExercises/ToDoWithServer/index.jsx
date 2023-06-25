@@ -5,41 +5,36 @@ import { ToDoElement } from './TODO/TODO';
 import { AddTask } from './AddTask/AddTask';
 import { API_URL, FORM_SCHEMA } from './constants';
 import { EmptyTaskList } from './EmptyTaskList/EmptyTaskList';
-import { setStateAsync } from './helpers';
+import { requestHandler, setStateAsync } from './helpers';
 
 export function ToDoWithServer({}) {
   const [data, setData] = useState([]);
-  const [errorList, setErrorList] = useState([]);
+  const [isError, setIsError] = useState([]);
   const [formData, setFormData] = useState(FORM_SCHEMA);
   const [isEdited, setIsEdited] = useState(false);
   const [isForm, setIsForm] = useState(false);
-  const isError = errorList.length > 0;
+  // const isError = errorList.length > 0;
   const [errorIds, setErrorIds] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isToDoError, setIsToDoError] = useState('');
   const isDataEmpty = data.length === 0;
 
   const getData = async () => {
+    setIsError(false);
     setIsLoading(true);
-    try {
-      setErrorList([]);
-      const dataFromServer = await fetch(`${API_URL}/todo`);
-      if (!dataFromServer.ok) {
-        throw new Error(dataFromServer.json());
-      }
-      const response = await dataFromServer.json();
-      setData(response);
-    } catch (err) {
-      await setStateAsync(() => {
-        setErrorList((prevState) => [...prevState, err]);
+    requestHandler('GET')
+      .then((response) => {
+        setData(response);
+      })
+      .catch(() => {
+        setIsError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
-    } finally {
-      // await setStateAsync(() => {
-      setIsLoading(false);
-      // });
-    }
   };
   useEffect(() => {
-    console.log(errorList, 'lista błędów');
+    console.log(data, 'todo');
   });
   useEffect(() => {
     getData();
@@ -70,22 +65,22 @@ export function ToDoWithServer({}) {
     setIsForm(true);
   };
   const markAsDone = async (id) => {
-    try {
-      const response = await fetch(`${API_URL}/todo/${id}/markAsDone`, {
-        method: 'PUT',
-        headers: { 'Content-type': 'appliction/json' },
+    setIsToDoError(false);
+    requestHandler('PUT', `${id}`)
+      .then((response) => {
+        if (!response.isDone) {
+          setIsToDoError(true);
+          setErrorIds((prevState) => [...prevState, id]);
+        } else {
+          getData();
+        }
+      })
+      .catch(() => {
+        setIsToDoError(true);
+        setErrorIds((prevState) => [...prevState, id]);
       });
-      if (!response.ok) {
-        throw new Error(response.json());
-      }
-    } catch (err) {
-      await setStateAsync(() => {
-        setErrorList((prevState) => [...prevState, err]);
-      });
-    } finally {
-      getData();
-    }
   };
+
   const handleIsForm = () => {
     setIsForm(true);
   };
@@ -127,7 +122,7 @@ export function ToDoWithServer({}) {
               isError={isErrorIncluded}
               handleEditTask={handleEditTask}
               markAsDone={markAsDone}
-              isDone={element.isDone}
+              isDone={element.isDone && !isToDoError}
               doneDate={element?.doneDate}
             />
           );
@@ -137,7 +132,7 @@ export function ToDoWithServer({}) {
           DODAJ
         </button>
       )}
-      {isDataEmpty && (
+      {(isDataEmpty || isError) && (
         <EmptyTaskList
           addTask={handleIsForm}
           isError={isError}

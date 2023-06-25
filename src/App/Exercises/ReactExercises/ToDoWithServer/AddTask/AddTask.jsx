@@ -28,7 +28,11 @@ export function AddTask({
         isEdited && setIsEdited(false);
       })
       .catch((jsonError) => {
+        //jsonError zmienna tylko co przechwytuje jsonResponse z reject z requestHandler a wyzej bierze z resolve w then
         setIsError(true);
+      })
+      .finally(() => {
+        getData();
       });
 
     // console.log('wywoluje sie handlesenddata', formData);
