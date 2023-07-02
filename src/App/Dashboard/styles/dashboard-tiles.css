@@ -10,6 +10,9 @@
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  position: absolute;
+  left: 1px;
+  bottom: 4px;
 }
 @keyframes swing {
   0% {
@@ -34,11 +37,7 @@
   margin-left: 80px;
   margin-top: 50px;
 }
-.dashboard-tiles-container .wavingHand {
-  position: absolute;
-  left: 1px;
-  bottom: 4px;
-}
+
 .dashboard .dashboard-tiles > div {
   margin: 1rem;
   margin-inline: 1px;
@@ -99,3 +98,8 @@
 .dashboard-tiles > div:hover .dashboard-tile-description {
   color: #fe3756;
 }
+/* .my-icons:hover {
+  color: #fe3756;
+  filter: brightness(1.2);
+  transition: filter 0.3s ease-in-out;
+} */
