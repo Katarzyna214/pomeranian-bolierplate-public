@@ -15,7 +15,7 @@
   line-height: 34px;
 }
 .pierwszybox {
-  -webkit-box-shadow: 80px 20px 30px -41px rgb(196, 193, 193);
+  box-shadow: 80px 20px 30px -41px rgb(196, 193, 193);
   box-sizing: border-box;
   font-size: 18px;
   flex-direction: column;
@@ -24,8 +24,8 @@
   /* padding: 18px 24px; */
   margin: 18px;
 
-  width: 500px;
-  height: 266px;
+  width: 550px;
+  height: max-content;
 
   background: #ffffff;
 

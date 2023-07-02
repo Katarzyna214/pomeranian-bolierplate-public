@@ -20,7 +20,7 @@ export const Blocks = () => {
         {' '}
         <div className="box1">
           <p className="dashboard-tile-title">Moje CV </p>{' '}
-          <PersonalCardIcon className="icons" />
+          <PersonalCardIcon className="my-icons" />
           <p className="dashboard-tile-description">
             Podgląd CV wraz z doświadczeniem
           </p>
@@ -28,13 +28,13 @@ export const Blocks = () => {
         </div>{' '}
         <div>
           <p className="dashboard-tile-title">Projekty</p>{' '}
-          <Folder className="icons" />
+          <Folder className="my-icons" />
           <p className="dashboard-tile-description">Moje własne projekty</p>
           <p className="dashboard-tile-description">zobacz więcej </p>
         </div>{' '}
         <div>
           <p className="dashboard-tile-title">Ćwiczenia </p>{' '}
-          <Edit className="icons" />
+          <Edit className="my-icons" />
           <p className="dashboard-tile-description">
             Wszystkie wykonane ćwiczenia
           </p>
@@ -43,14 +43,14 @@ export const Blocks = () => {
         <div>
           {' '}
           <p className="dashboard-tile-title">Edukacja</p>{' '}
-          <Teacher className="icons" />
+          <Teacher className="my-icons" />
           <p className="dashboard-tile-description">Ukończone szkoły i kursy</p>
           <p className="dashboard-tile-description">zobacz więcej</p>
         </div>{' '}
         <div>
           {' '}
           <p className="dashboard-tile-title">Tech stack</p>{' '}
-          <Code className="icons" />
+          <Code className="my-icons" />
           <p className="dashboard-tile-description">
             {' '}
             Stack technologiczny realizowany na kursie{' '}
@@ -60,7 +60,7 @@ export const Blocks = () => {
         <div>
           {' '}
           <p className="dashboard-tile-title">Doświadczenie</p>
-          <Status className="icons" />
+          <Status className="my-icons" />
           <p className="dashboard-tile-description">
             Poprzednie stanowiska pracy i szkolenia
           </p>
