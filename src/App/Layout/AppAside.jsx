@@ -37,14 +37,13 @@ export function AppAside() {
             <MessagesIcon className="Icon" />
             <NavLink to="faq">FAQ</NavLink>
           </li>
-          <hr/>
+          <hr />
           <li>
             <SettingIcon className="Icon" />
             <NavLink to="settings">Ustawienia</NavLink>
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '4rem 0' }}>Sidebar items, widgets, etc</p>
     </aside>
   );
 }

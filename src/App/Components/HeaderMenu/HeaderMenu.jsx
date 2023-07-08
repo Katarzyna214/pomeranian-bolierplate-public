@@ -3,7 +3,7 @@ import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
 import { RightCornerMenuPopup } from '../RighCornerMenuPopup/RightCornerMenuPopup';
 import { useState } from 'react';
-import { ReactComponent as MyPhoto1 } from '../../Images/Myphoto1.jpg';
+import MyPhoto1 from '../../Images/Myphoto1.jpg';
 
 export const HeaderMenu = () => {
   const [isVisible, setVisibility] = useState(false);
@@ -16,7 +16,8 @@ export const HeaderMenu = () => {
       <SettingIcon />
       <div className="circular_image">
         {' '}
-        <img src="http://placekitten.com/500/500" alt="kitten" />
+        {/* <img src="http://placekitten.com/500/500" alt="kitten" /> */}
+        <img src={MyPhoto1} alt="Katarzyna" />
       </div>
       <div className="name-surname-container">
         <h4>Katarzyna</h4>

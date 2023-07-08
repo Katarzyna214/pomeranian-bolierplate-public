@@ -1,10 +1,11 @@
-import { ReactComponent as WavingHand } from '../../Components/Icons/WavingHand.svg';
+import { WavingHand } from '../../Components/Icons/WavingHandIcon';
 import { ReactComponent as PersonalCardIcon } from '../../Images/tiles/personalcard.svg';
 import { ReactComponent as Edit } from '../../Images/tiles/edit.svg';
 import { ReactComponent as Code } from '../../Images/tiles/code.svg';
 import { ReactComponent as Folder } from '../../Images/tiles/folder-2.svg';
 import { ReactComponent as Status } from '../../Images/tiles/status-up.svg';
 import { ReactComponent as Teacher } from '../../Images/tiles/teacher.svg';
+import { Link } from 'react-router-dom';
 
 export const Blocks = () => {
   return (
@@ -53,9 +54,9 @@ export const Blocks = () => {
           <Code className="my-icons" />
           <p className="dashboard-tile-description">
             {' '}
-            Stack technologiczny realizowany na kursie{' '}
-            {/* <SeeMoreLink to="tech-stack" />{' '} */}
+            Stack technologiczny realizowany na kursie
           </p>{' '}
+          <Link to="/techstack/">Zobacz więcej</Link>
         </div>{' '}
         <div>
           {' '}
