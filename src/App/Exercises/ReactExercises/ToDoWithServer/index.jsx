@@ -85,15 +85,15 @@ export function ToDoWithServer({}) {
     setIsForm(true);
   };
   if (isLoading) {
-    return <div>Ładowanie...</div>;
+    return <div>Loading...</div>;
   }
   return (
     <div>
       {!isForm && !isError && (
         <>
           <p className="todopar">Tutaj znajdziesz listę swoich zadań.</p>
-          <button className="button-add-addtask" onClick={handleIsForm}>
-            Dodaj
+          <button className="button-add-addtask1" onClick={handleIsForm}>
+            +
           </button>
         </>
       )}
