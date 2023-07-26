@@ -5,6 +5,7 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  width: max-content;
 }
 
 aside ul {

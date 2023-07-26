@@ -1,10 +1,17 @@
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 export const CV = () => {
   return (
     <div className="dashboard">
-      <h1>CV</h1>
-      <p className="naglowek">Tutaj znajduje się moje CV!</p>
+      <Link to=".." relative="path">
+        {' '}
+        {'< CV'}{' '}
+      </Link>
+      <p className="naglowek">
+        Poniżej znajdziesz informacje na temat mojego wykształcenia oraz
+        doświadczenia.
+      </p>
     </div>
   );
 };

@@ -25,7 +25,8 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">
             Podgląd CV wraz z doświadczeniem
           </p>
-          <p className="dashboard-tile-description">zobacz więcej </p>
+          {/* <p className="dashboard-tile-description">zobacz więcej </p> */}
+          <Link to="/cv/">Zobacz więcej</Link>
         </div>{' '}
         <div>
           <p className="dashboard-tile-title">Projekty</p>{' '}
@@ -39,7 +40,8 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">
             Wszystkie wykonane ćwiczenia
           </p>
-          <p className="dashboard-tile-description">zobacz więcej</p>
+          {/* <p className="dashboard-tile-description">zobacz więcej</p> */}
+          <Link to="/exercises/">Zobacz więcej</Link>
         </div>{' '}
         <div>
           {' '}
