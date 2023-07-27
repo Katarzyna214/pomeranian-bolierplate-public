@@ -1,9 +1,11 @@
 import './styles.css';
+import React from 'react';
 import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
 import { RightCornerMenuPopup } from '../RighCornerMenuPopup/RightCornerMenuPopup';
 import { useState } from 'react';
 import MyPhoto1 from '../../Images/Myphoto1.jpg';
+import { Link } from 'react-router-dom';
 
 export const HeaderMenu = () => {
   const [isVisible, setVisibility] = useState(false);
@@ -11,9 +13,12 @@ export const HeaderMenu = () => {
   const clickHandler = () => {
     setVisibility(!isVisible);
   };
+
   return (
     <div className="images-container">
-      <SettingIcon />
+      <Link to="/settings">
+        <SettingIcon onClick />
+      </Link>
       <div className="circular_image">
         {' '}
         {/* <img src="http://placekitten.com/500/500" alt="kitten" /> */}
