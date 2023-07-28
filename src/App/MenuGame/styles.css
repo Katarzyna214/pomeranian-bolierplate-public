@@ -1,0 +1,30 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+p .naglowek {
+  color: black;
+  font-size: 18px;
+}
+.menuGameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-top: 30px;
+}
+.molecontainer {
+  display: flex;
+  flex-direction: column;
+}
+.moleparagraph {
+  padding-left: 18px;
+}
+.memoryIcon svg {
+  width: 93px;
+  height: 65px;
+}
+.memoparagraph {
+  padding-left: 15px;
+}

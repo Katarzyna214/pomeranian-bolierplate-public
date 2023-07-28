@@ -94,8 +94,7 @@
 .dashboard-tiles > div:hover .dashboard-tile-description {
   color: #fe3756;
 }
-/* .my-icons:hover {
-  color: #fe3756;
-  filter: brightness(1.2);
-  transition: filter 0.3s ease-in-out;
-} */
+.my-icons {
+  height: 35px;
+  width: 35px;
+}

@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { EditIcon } from '../Components/Icons/EditIcon';
-// import { ElementIcon } from '../Components/Icons/ElementIcon';
 import { HouseIcon } from '../Components/Icons/HouseIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
@@ -35,15 +34,15 @@ export function AppAside() {
           </li>
           <li>
             <MoleIcon className="Icon" />
-            <NavLink to="">Gra kret</NavLink>
+            <NavLink to="hit-the-mole">Gra kret</NavLink>
           </li>
           <li>
             <MemoryIcon className="Icon" />
-            <NavLink to="">Gra memo</NavLink>
+            <NavLink to="memory-game">Gra memo</NavLink>
           </li>
           <li>
             <NoteIcon className="Icon" />
-            <NavLink to="">Formularz</NavLink>
+            <NavLink to="basic-forms">Formularz</NavLink>
           </li>
           <li>
             <CalendarIcon className="Icon" />
