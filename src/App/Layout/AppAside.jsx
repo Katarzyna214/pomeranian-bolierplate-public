@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { EditIcon } from '../Components/Icons/EditIcon';
-import { ElementIcon } from '../Components/Icons/ElementIcon';
 import { HouseIcon } from '../Components/Icons/HouseIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
 import { MessagesIcon } from '../Components/Icons/MessagesIcon';
+import { CodeIcon } from '../Components/Icons/CodeIcon';
 import './styles/aside.css';
+import { MoleIcon } from '../Components/Icons/MoleIcon';
+import { MemoryIcon } from '../Components/Icons/GameBoyIcon';
+import { NoteIcon } from '../Components/Icons/NoteIcon';
 export function AppAside() {
   return (
     <aside>
@@ -19,15 +22,27 @@ export function AppAside() {
           <li>
             {' '}
             <PersonalCardIcon className="Icon" />
-            <NavLink to="cv">CV</NavLink>
+            <NavLink to="cv">Moje CV</NavLink>
           </li>
           <li>
-            <ElementIcon className="Icon" />
-            <NavLink to="blocks">Bloki</NavLink>
+            <CodeIcon className="Icon" />
+            <NavLink to="/techstack/">Tech stack</NavLink>
           </li>
           <li>
             <EditIcon className="Icon" />
-            <NavLink to="exercises">Ćwiczenia</NavLink>
+            <NavLink to="/exercises/">Ćwiczenia</NavLink>
+          </li>
+          <li>
+            <MoleIcon className="Icon" />
+            <NavLink to="hit-the-mole">Gra kret</NavLink>
+          </li>
+          <li>
+            <MemoryIcon className="Icon" />
+            <NavLink to="memory-game">Gra memo</NavLink>
+          </li>
+          <li>
+            <NoteIcon className="Icon" />
+            <NavLink to="basic-forms">Formularz</NavLink>
           </li>
           <li>
             <CalendarIcon className="Icon" />
@@ -37,14 +52,13 @@ export function AppAside() {
             <MessagesIcon className="Icon" />
             <NavLink to="faq">FAQ</NavLink>
           </li>
-          <hr/>
+          <hr />
           <li>
             <SettingIcon className="Icon" />
             <NavLink to="settings">Ustawienia</NavLink>
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '4rem 0' }}>Sidebar items, widgets, etc</p>
     </aside>
   );
 }

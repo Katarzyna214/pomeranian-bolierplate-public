@@ -1,10 +1,37 @@
-.dashboard {
-  display: flex;
+.cv {
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left;
+  text-align: left; */
 }
-p .naglowek {
-  color: black;
+.naglowek {
+  color: var(--secondary-secondary, #23213d);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* header/H4 */
+  font-family: Poppins;
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 188.889% */
+}
+.linkCv {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  color: var(--secondary-secondary, #23213d);
+}
+.cv .cvContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.myData {
+  position: absolute;
+  right: 100px;
+  top: 200px;
+}
+.gitHubIcon {
+  height: 23px;
+  width: 23px;
 }

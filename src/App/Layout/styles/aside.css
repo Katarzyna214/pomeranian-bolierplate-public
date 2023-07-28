@@ -5,6 +5,7 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  width: max-content;
 }
 
 aside ul {
@@ -74,9 +75,12 @@ aside nav ul li .Icon {
 aside li a {
   display: block;
   padding: 0.5rem;
+  text-decoration: none;
+  color: black;
 }
 
 aside a.active {
   background-color: var(--color-primary-blue);
   color: var(--color-white);
+  text-decoration: none;
 }

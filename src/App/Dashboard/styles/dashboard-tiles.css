@@ -1,5 +1,4 @@
 .dashboard-tiles-container h2 {
-  /* background: url(../images/waving-hand-sign.svg) no-repeat; */
   padding-left: 2rem;
   margin-left: 2rem;
   color: #fe3756;
@@ -26,15 +25,12 @@
   }
 }
 .dashboard .dashboard-tiles {
-  /* display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: repeat(2, 2fr); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1250px;
+  width: 1000px;
   gap: 100px;
-  margin-left: 80px;
+  margin-left: 50px;
   margin-top: 50px;
 }
 
@@ -98,8 +94,7 @@
 .dashboard-tiles > div:hover .dashboard-tile-description {
   color: #fe3756;
 }
-/* .my-icons:hover {
-  color: #fe3756;
-  filter: brightness(1.2);
-  transition: filter 0.3s ease-in-out;
-} */
+.my-icons {
+  height: 35px;
+  width: 35px;
+}
