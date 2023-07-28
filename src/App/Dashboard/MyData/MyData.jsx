@@ -6,9 +6,7 @@ export const MyData = () => {
       <img className="photo_dashboard" src={MyPhoto1} alt="loading photo" />
       <b className="mydataname">Katarzyna</b>{' '}
       <p className="mydatainfo">Gorlice</p>
-      <p className="mydatainfo1">
-        e-mail: katarzyna.mazur@pomeranianstartit.pl
-      </p>
+      <p className="mydatainfo1">e-mail:katarzyna.mazur@pomeranianstartit.pl</p>
       <p className="mydatainfo3">telefon: +48 567 891 890</p>
     </div>
   );

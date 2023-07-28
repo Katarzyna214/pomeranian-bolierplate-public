@@ -1,8 +1,8 @@
 .cv {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left; */
+  text-align: left;
 }
 .naglowek {
   color: var(--secondary-secondary, #23213d);
@@ -23,15 +23,48 @@
   color: var(--secondary-secondary, #23213d);
 }
 .cv .cvContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
 }
 .myData {
-  position: absolute;
-  right: 100px;
-  top: 200px;
+  /* position: relative;
+  bottom: 90px;
+  left: 300px; */
 }
 .gitHubIcon {
   height: 23px;
   width: 23px;
+}
+.mypagesicon {
+  display: grid;
+  grid-template-columns: 40px 40px 40px;
+}
+.skillscontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60px;
+  padding: 6px 6px;
+  border-radius: 4px;
+  background: var(--black-black, #000);
+  color: var(--text-alt-primary, #fff);
+  font-family: 'Poppins';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.hr {
+  height: 1px;
+  width: 257px;
+  border-color: #222;
+}
+.skillsparagraph {
+  color: var(--text-text-primary, #222);
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
