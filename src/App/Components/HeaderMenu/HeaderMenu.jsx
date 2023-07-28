@@ -16,9 +16,10 @@ export const HeaderMenu = () => {
 
   return (
     <div className="images-container">
-      <Link to="/settings">
-        <SettingIcon onClick />
+      <Link to="/settings/">
+        <SettingIcon className="settingIcon" />
       </Link>
+
       <div className="circular_image">
         {' '}
         {/* <img src="http://placekitten.com/500/500" alt="kitten" /> */}
