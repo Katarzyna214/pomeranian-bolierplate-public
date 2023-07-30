@@ -4,20 +4,23 @@ import { Link } from 'react-router-dom';
 import { LinkedInIcon } from '../Components/Icons/LinkedInIcon';
 import { GitHubIconIcon } from '../Components/Icons/GitHubIcon';
 import { FacebookIcon } from '../Components/Icons/FacebookIcon';
+import { Table } from './Table';
 
 export const CV = () => {
   return (
     <div className="cv">
       <Link to=".." relative="path" className="linkCv">
         {' '}
-        {'< CV'}{' '}
+        {'< Moje CV'}{' '}
       </Link>
       <p className="naglowek">
         Poniżej znajdziesz informacje na temat mojego wykształcenia oraz
         doświadczenia.
       </p>
       <div className="cvContainer">
-        <div>Moje CV</div>
+        <div>
+          <Table />
+        </div>
         <div className="myData">
           <div className="mypagesicon">
             {' '}
@@ -33,11 +36,25 @@ export const CV = () => {
           </div>
           <MyData />
           <p className="skillsparagraph">Skills</p>
-
+          <hr className="hr" />
           <div className="skillscontainer">
-            HTML5,CSS3, XML, JavaScript, Jest, React.js, React Redux,
-            TypeScript, REST API, JSON, WSL, Node, Prettier, ESLint, Husky,
-            Visual Studio Code, Git/GitHub
+            <div className="eachskill">HTML5</div>
+            <div className="eachskill">CSS3</div>
+            <div className="eachskill">XML</div>
+            <div className="eachskill">JavaScript</div>
+            <div className="eachskill">Jest</div>
+            <div className="eachskill">React.js</div>
+            <div className="eachskill">React Redux</div>
+            <div className="eachskill">TypeScript</div>
+            <div className="eachskill">REST API</div>
+            <div className="eachskill">JSON</div>
+            <div className="eachskill">WSL</div>
+            <div className="eachskill">Node</div>
+            <div className="eachskill">Prettier</div>
+            <div className="eachskill">ESLint</div>
+            <div className="eachskill">Husky</div>
+            <div className="eachskill">Visual Studio Code</div>
+            <div className="eachskill">Git/GitHub</div>
           </div>
         </div>
       </div>

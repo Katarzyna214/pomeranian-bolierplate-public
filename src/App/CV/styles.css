@@ -25,12 +25,10 @@
 .cv .cvContainer {
   display: flex;
   flex-direction: row;
-  width: 200px;
+  width: 1500px;
+  justify-content: space-between;
 }
 .myData {
-  /* position: relative;
-  bottom: 90px;
-  left: 300px; */
 }
 .gitHubIcon {
   height: 23px;
@@ -42,28 +40,30 @@
 }
 .skillscontainer {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 60px;
-  padding: 6px 6px;
-  border-radius: 4px;
-  background: var(--black-black, #000);
-  color: var(--text-alt-primary, #fff);
-  font-family: 'Poppins';
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  justify-content: space-between;
+  width: 300px;
 }
 .hr {
   height: 1px;
-  width: 257px;
+
   border-color: #222;
 }
 .skillsparagraph {
   color: var(--text-text-primary, #222);
   font-family: 'Poppins';
   font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.eachskill {
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--black-black, #000);
+  color: var(--text-alt-primary, #fff);
+  font-family: 'Poppins';
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

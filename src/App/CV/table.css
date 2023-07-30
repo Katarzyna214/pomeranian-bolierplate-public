@@ -1,0 +1,13 @@
+.td1style {
+  font-weight: bolder;
+  width: 100px;
+  vertical-align: text-top;
+}
+.tdstyle {
+  padding: 10px;
+  line-height: 6px;
+  width: 500px;
+}
+.tddivstyle {
+  margin-bottom: 12px;
+}
