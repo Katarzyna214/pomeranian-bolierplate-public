@@ -1,183 +1,184 @@
-// import React from 'react';
-// import './table.css';
-
-// export const Table = () => {
-//   // Dane do wypełnienia tabelki
-//   const data = [
-//     {
-//       category: 'EXPERIENCE',
-//       additionalInfo: [
-//         'An intensive three-month programming course, led by experienced trainers, encompassed numerous hours of live coding and hands-on work on diverse practical projects.This course provided participants with a solid and comprehensive foundation necessary for launching a career in the IT industry as a Frontend Developer. The main technologies covered were HTML5, CSS3, JavaScript, React, Redux, and TypeScript. Students also utilized tools such as Git, GitHub, Redmine, JIRA, and Confluence.',
-//         'complete / review client reporting ensuring accuracy and timeliness, answer queries from different departments, reconcile collateral balances, investigate and solve discrepancies, review and document process flows/procedures and contribute new ideas to further streamline the operational process, involve in departmental ad-hoc projects, involve in the training and development of other team members (8 people), being a point of contact for any routine/escalation queries raised by internal departments, support for team leader (prepare and plan workload)',
-//       ],
-//       items: [
-//         {
-//            'Pomeranian START.IT',
-//            '3-months course',
-//           '04/-07/2023',
-//         },
-//         {
-//           firmname: 'State Street',
-//           details: 'Product Administrator',
-//           date: '05/2023 - present',
-//         },
-//         {
-//           firmname: 'Boohoo Group PLC (UK)',
-//           details: 'Team Manager',
-//           date: '04/2022 - 12/2022',
-//         },
-//         {
-//           firmname: 'Boohoo Group PLC (UK)',
-//           details: 'Warehouse Operative',
-//           date: '10/2020 - 04/2022',
-//         },
-//         {
-//           firmname: 'Zespoł Szkolno-Przedszkolny w Strzeszynie',
-//           details: ' English & Homeroom Teacher',
-//           date: '02/2019 - 08/2020 ',
-//         },
-//         {
-//           firmname: 'Szkoła Podstawowa im. Stanisława Konarskiego w Gorlicach',
-//           details: 'Learning Support Assistant',
-//           date: '10/2018 - 01/2019',
-//         },
-//         {
-//           firmname: 'Szkoła Podstawowa im. Stanisława Konarskiego w Gorlicach',
-//           details: 'Kindergarten Assistant',
-//           date: '10/2018 - 01/2019',
-//         },
-//         {
-//           firmname: 'Business Lingo',
-//           details: 'Customer Service Advisor',
-//           date: '01/2018 - 06/2018',
-//         },
-//       ],
-//     },
-//     {
-//       category: 'EDUCATION',
-//       items: [
-//         'Studia na Uniwersytecie ABC',
-//         'Kurs programowania w XYZ Academy',
-//         'Inne',
-//       ],
-//     },
-//     {
-//       category: 'COURSES & CERTIFICATES',
-//       items: ['Nagroda za osiągnięcia naukowe', 'Nagroda za projekt Y'],
-//     },
-//     { category: 'AWARDS & ACHIEVEMENTS', items: ['Gra na pianinie'] },
-//     { category: 'PASSION', items: ['Gra na pianinie'] },
-//   ];
-
-//   return (
-//     <table>
-//       {data.map((row, index) => (
-//         <React.Fragment key={index}>
-//           {row.items.map((item, idx) => (
-//             <tr key={`${index}-${idx}`}>
-//               {idx === 0 && (
-//                 <td className="td1style" rowSpan={row.items.length}>
-//                   {row.category}
-//                 </td>
-//               )}
-//               <td className="tdstyle">
-//                 <div className="tddivstyle">
-//                   <strong>{item.firmname}</strong>
-//                   <p>{item.details}</p>
-//                   <p>{item.date}</p>
-//                 </div>
-//               </td>
-//               {idx === 0 && (
-//                 <td rowSpan={data[0].items.length}>
-//                   {data[0].additionalInfo[idx]}
-//                 </td>
-//               )}
-//             </tr>
-//           ))}
-//         </React.Fragment>
-//       ))}
-//     </table>
-//   );
-// };
-import React, { useState } from 'react';
+import React from 'react';
+import './table.css';
 
 export const Table = () => {
-  const [data, setData] = useState([
+  // Dane do wypełnienia tabelki
+  const data = [
     {
       category: 'EXPERIENCE',
+      additionalInfo: [
+        {
+          info: 'An intensive three-month programming course, led by experienced trainers, encompassed numerous hours of live coding and hands-on work on diverse practical projects.This course provided participants with a solid and comprehensive foundation necessary for launching a career in the IT industry as a Frontend Developer.',
+        },
+        {
+          info: 'complete / review client reporting ensuring accuracy and timeliness, answer queries from different departments, reconcile collateral balances, investigate and solve discrepancies, review and document process flows/procedures and contribute new ideas to further streamline the operational process, involve in departmental ad-hoc projects, involve in the training and development of other team members (8 people), being a point of contact for any routine/escalation queries raised by internal departments, support for team leader (prepare and plan workload)',
+        },
+        {
+          info: `monitored department's progress against Key Performance Indicators to keep the management's
+          expectations, provided weekly, daily, and monthly reports to control and improve performance,
+          managed shifts to ensure smooth workflow was responsible for departmental Health & Safety rules reviewed and improved the operating environment, maintained housekeeping standards created and maintained an inclusive and positive team culture, motivated and led the team worked with appropriate parties to provide solutions to team issues, considering relevant policies and ethical practices ensured completion of high-standard Right to Work (RTW) interviews ensured employees' records, including Right to Work documentation, were up to date, appropriate, and reviewed`,
+        },
+        {
+          info: `picked and packed customer orders using RF handheld terminals and Warehouse Management Systems processed stock in an accurate manner using the appropriate methods demonstrated a systematic eye for detail to carry out accurate, high-quality, and efficient work to meet KPI targets received and checked customer returns ensured work areas were kept clean, neat, and well-organized`,
+        },
+        {
+          info: `conducted English language classes and served as a homeroom teacher for 22 childrenprepared and delivered engaging lessons following the teaching plan and adapting teaching materials to meet pupils' needsdeveloped instructional materials to support the teaching and learning processorganized extracurricular activities in English for interested pupilsmonitored pupils' behavior and fostered values and social skills development, arranged meetings with parents to discuss concernsparticipated in school projects, competitions, trips and cultural events`,
+        },
+        {
+          info: `provided learning support to the boy with Asperger's syndrome, including duties listed below: assisted in organizing the child's after-school and in-school schedule taught and demonstrated simple social behaviors, such as appropriate verbal and non-verbal responses to others' behaviors assisted him with homework in humanities subjects monitored the boy's progress and behavior, documented observations, and communicated with teachers participated in meetings and consultations with parents, sharing information about the child's progress and addressing concerns`,
+        },
+        {
+          info: `assisted the lead teacher in activities and daily routines for kindergarten children (up to 30 children in group) ensured children's safety and well-being during meals, naps, and outdo engaged children in age-appropriate learning through play and interactive, educational activities collaborated with the team on educational projects and events communicated with parents/guardians about their child's activities and progress participated in staff meetings and training sessions`,
+        },
+        {
+          info: `translated various documents (memoQ CAT tool usage) / prepared documents for translation organized office work and maintained efficient workflows set deadlines for translators and proofreaders prepared cost estimates and deadlines for customers`,
+        },
+      ],
       items: [
         {
-          id: 1,
-          name: 'Pomeranian START.IT',
+          firmname: 'Pomeranian START.IT',
           details: '3-months course',
           date: '04/-07/2023',
         },
         {
-          id: 2,
-          name: 'Firma XYZ',
-          details: 'Opis doświadczenia w Firmie XYZ...',
-          date: '2021 - 2022',
+          firmname: 'State Street',
+          details: 'Product Administrator',
+          date: '05/2023 - present',
         },
-        // Dodaj więcej elementów w ramach "Doświadczenia"
-      ],
-      additionalInfo: [
-        { id: 1, info: 'Dodatkowe informacje o Doświadczeniu 1...' },
-        { id: 2, info: 'Dodatkowe informacje o Doświadczeniu 2...' },
-        // Dodaj więcej dodatkowych informacji dla kategorii "Doświadczenie"
+        {
+          firmname: 'Boohoo Group PLC (UK)',
+          details: 'Team Manager',
+          date: '04/2022 - 12/2022',
+        },
+        {
+          firmname: 'Boohoo Group PLC (UK)',
+          details: 'Warehouse Operative',
+          date: '10/2020 - 04/2022',
+        },
+        {
+          firmname: 'Zespoł Szkolno-Przedszkolny w Strzeszynie',
+          details: ' English & Homeroom Teacher',
+          date: '02/2019 - 08/2020 ',
+        },
+        {
+          firmname: 'Szkoła Podstawowa im. Stanisława Konarskiego w Gorlicach',
+          details: 'Learning Support Assistant',
+          date: '10/2018 - 01/2019',
+        },
+        {
+          firmname: 'Szkoła Podstawowa im. Stanisława Konarskiego w Gorlicach',
+          details: 'Kindergarten Assistant',
+          date: '10/2018 - 01/2019',
+        },
+        {
+          firmname: 'Business Lingo',
+          details: 'Customer Service Advisor',
+          date: '01/2018 - 06/2018',
+        },
       ],
     },
-    // Dodaj pozostałe kategorie i ich elementy oraz dodatkowe informacje
-  ]);
+    {
+      category: 'EDUCATION',
+      items: [
+        {
+          firmname: 'Jagiellonian University',
+          details: 'English Philology with German, Bachelor’s degree',
+          date: '10/2013 – 06/2016',
+        },
+        {
+          firmname: 'Pedagogical University of Cracow',
+          details: 'Mathematics and Oligophrenic Pedagogy, Bachelor’s degree',
+          date: '10/2013 – 06/2017 ',
+        },
+        {
+          firmname: 'Pedagogical University of Cracow',
+          details: 'Translation Studies, Master’s degree',
+          date: '10/2016 – 06/2018',
+        },
+      ],
+    },
+    {
+      category: 'COURSES & CERTIFICATES',
+      items: [
+        {
+          details:
+            'Developing key competences among students in relation to the implementation of the core curriculum (workshop of MCDN Nowy Sącz)',
+          date: '02/2020',
+        },
+        {
+          details:
+            'Active teaching of a foreign language – methodological approach (workshop of MCDN Nowy Sącz)',
+          date: '10/2019',
+        },
+      ],
+    },
+    {
+      category: 'AWARDS & ACHIEVEMENTS',
+      items: [
+        {
+          details: `Teacher's promotion with the occupational title of a contract teacher`,
+          date: '06/2020',
+        },
+        {
+          details:
+            'University scholarship in Jagiellonian University for students with the highest average grade',
+          date: '2014-2016',
+        },
+      ],
+    },
+    {
+      category: 'PASSION',
+      items: [
+        {
+          details:
+            'new technologies, IT and programming, sport (jogging, cycling, swimming, skiing, skating), travels, detective stories and movies, movies subtitling and translation of legal/business texts',
+        },
+      ],
+    },
+  ];
 
   return (
-    <table
-      style={{ borderCollapse: 'collapse', width: '60%', margin: '20px auto' }}
-    >
-      {data.map((category, categoryIndex) => (
-        <React.Fragment key={categoryIndex}>
-          <tr>
-            <td
-              rowSpan={Math.max(
-                category.items.length,
-                category.additionalInfo.length
+    <table className="tablecv">
+      {data.map((row, index) => (
+        <React.Fragment key={index}>
+          {row.items.map((item, idx) => (
+            <tr className="tr1" key={`${index}-${idx}`}>
+              {idx === 0 && (
+                <>
+                  <td className="td1style" rowSpan={row.items.length}>
+                    {row.category}
+                  </td>
+                  <td className="tdstyle">
+                    <div className="tddivstyle">
+                      <strong>{item.firmname}</strong>
+                      <p className="detailsparagraph">{item.details}</p>
+                      <p>{item.date}</p>
+                    </div>
+                  </td>
+                  <td className="td2style" rowSpan={row.items.length}>
+                    {row.additionalInfo && (
+                      <ul className="additional-info-list">
+                        {row.additionalInfo.map((info, infoIdx) => (
+                          <li key={infoIdx}>{info.info}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </td>
+                </>
               )}
-              style={{ padding: '10px', textAlign: 'center' }}
-            >
-              {category.category}
-            </td>
-            <td style={{ padding: '10px', textAlign: 'center' }}>
-              {category.items.map((item) => (
-                <div key={item.id}>
-                  <strong>{item.name}</strong>
-                  <p>{item.details}</p>
-                  <p>{item.date}</p>
-                </div>
-              ))}
-            </td>
-            {category.additionalInfo.map((info) => (
-              <td
-                key={info.id}
-                style={{ padding: '10px', textAlign: 'center' }}
-              >
-                {info.info}
-              </td>
-            ))}
-            {category.additionalInfo.length === 0 && (
-              <td style={{ padding: '10px', textAlign: 'center' }}></td>
-            )}
-            {category.additionalInfo.length < category.items.length && (
-              <td
-                style={{ padding: '10px', textAlign: 'center' }}
-                rowSpan={category.items.length - category.additionalInfo.length}
-              ></td>
-            )}
-            {category.additionalInfo.length > category.items.length && (
-              <td
-                style={{ padding: '10px', textAlign: 'center' }}
-                rowSpan={category.additionalInfo.length - category.items.length}
-              ></td>
-            )}
-          </tr>
+              {idx !== 0 && (
+                <>
+                  <td className="tdstyle">
+                    <div className="tddivstyle">
+                      <strong>{item.firmname}</strong>
+                      <p className="detailsparagraph">{item.details}</p>
+                      <p>{item.date}</p>
+                    </div>
+                  </td>
+                </>
+              )}
+            </tr>
+          ))}
         </React.Fragment>
       ))}
     </table>
