@@ -2,7 +2,7 @@ import { MyData } from '../Dashboard/MyData/MyData';
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { LinkedInIcon } from '../Components/Icons/LinkedInIcon';
-import { GitHubIconIcon } from '../Components/Icons/GitHubIcon';
+import { GitHubIcon } from '../Components/Icons/GitHubIcon';
 import { FacebookIcon } from '../Components/Icons/FacebookIcon';
 import { Table } from './Table';
 
@@ -28,7 +28,7 @@ export const CV = () => {
               <LinkedInIcon />
             </Link>
             <Link to="https://github.com/katarzyna214">
-              <GitHubIconIcon className="gitHubIcon" />
+              <GitHubIcon className="gitHubIcon" />
             </Link>
             <Link to="https://facebook.com/katarzyna.mazur.921230">
               <FacebookIcon className="gitHubIcon" />
