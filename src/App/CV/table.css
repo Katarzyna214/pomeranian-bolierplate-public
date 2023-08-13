@@ -5,24 +5,25 @@
 }
 .tdstyle {
   line-height: 11px;
-  width: 400px;
-  height: auto;
+  width: 250px;
   vertical-align: text-top;
 }
 .tddivstyle {
   margin-bottom: 12px;
   vertical-align: text-top;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 .td2style {
-  width: 650px;
+  width: fit-content;
   vertical-align: text-top;
-  height: auto;
 }
 
 .tablecv {
-  width: max-content;
+  width: 100%;
   vertical-align: text-top;
-  border-spacing: 1px;
+
+  border-collapse: collapse;
 }
 .tr1 {
   padding: 1px;
@@ -34,10 +35,10 @@ strong {
 .detailsparagraph {
   line-height: normal;
 }
-.liitemscolumn3 {
-  margin-bottom: 12px;
-}
 .additional-info-list {
   display: flex; /* Używamy flexboxa */
   flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  width: 630px;
 }
