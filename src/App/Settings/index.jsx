@@ -1,6 +1,18 @@
 import './styles.css';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 export const Settings = () => {
+  const [fontSize, setFontSize] = useState('medium'); // Początkowa wartość: średnia czcionka
+
+  useEffect(() => {
+    document.body.classList.remove('small-font', 'medium-font', 'large-font');
+    document.body.classList.add(`${fontSize}-font`);
+  }, [fontSize]);
+
+  const handleFontSizeChange = (newSize) => {
+    setFontSize(newSize);
+  };
+
   return (
     <div className="dashboard">
       <Link to=".." relative="path">
@@ -10,17 +22,44 @@ export const Settings = () => {
       <p className="settingsParagraph">
         Ustaw rozmiar fontu zgodnie z Twoimi potrzebami oraz preferencjami.
       </p>
-      <div>
-        <h4 className="settingsHeading">Wybierz rozmiar fontu</h4>
-        <div className="radiobuttonssettings">
-          <input type="radio" id="font-size-small" />
-          <label htmlForfor="font-size-small">font size - small</label>
-          <input type="radio" id="font-size-medium" />
-          <label htmlForfor="font-size-medium">font size - medium</label>
-          <input type="radio" id="font-size-large" />
-          <label htmlForfor="font-size-large">font size - large</label>
+      <form className="font-size-options">
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="fontSize"
+              value="small"
+              checked={fontSize === 'small'}
+              onChange={() => handleFontSizeChange('small')}
+            />
+            Mała czcionka
+          </label>
         </div>
-      </div>
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="fontSize"
+              value="medium"
+              checked={fontSize === 'medium'}
+              onChange={() => handleFontSizeChange('medium')}
+            />
+            Średnia czcionka
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="fontSize"
+              value="large"
+              checked={fontSize === 'large'}
+              onChange={() => handleFontSizeChange('large')}
+            />
+            Duża czcionka
+          </label>
+        </div>
+      </form>
     </div>
   );
 };

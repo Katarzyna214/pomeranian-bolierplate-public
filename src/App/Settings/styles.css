@@ -28,3 +28,18 @@
   margin: 0px;
   padding: 0px;
 }
+body {
+  font-size: 16px; /* Domyślny rozmiar czcionki */
+}
+
+body.small-font {
+  font-size: 14px;
+}
+
+body.medium-font {
+  font-size: 16px;
+}
+
+body.large-font {
+  font-size: 18px;
+}
