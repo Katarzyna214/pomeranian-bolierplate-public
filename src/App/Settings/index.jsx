@@ -26,6 +26,7 @@ export const Settings = () => {
         <div>
           <label>
             <input
+              className="radiobutton"
               type="radio"
               name="fontSize"
               value="small"
@@ -38,6 +39,7 @@ export const Settings = () => {
         <div>
           <label>
             <input
+              className="radiobutton"
               type="radio"
               name="fontSize"
               value="medium"
@@ -50,6 +52,7 @@ export const Settings = () => {
         <div>
           <label>
             <input
+              className="radiobutton"
               type="radio"
               name="fontSize"
               value="large"

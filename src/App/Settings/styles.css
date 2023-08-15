@@ -43,3 +43,28 @@ body.medium-font {
 body.large-font {
   font-size: 18px;
 }
+label {
+  color: var(--text-text-primary, #222);
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.font-size-options input {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+.font-size-options input:checked {
+  background-color: #fe3756;
+}
