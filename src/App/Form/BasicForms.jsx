@@ -26,7 +26,7 @@ const schemaValidationValues = {
 };
 const schemaValidation = {
   required: 'Pole jest wymagane',
-  email: 'Musisz poda poprawny email!',
+  email: 'Musisz podać poprawny email!',
   boolean: 'To pole musi być zaznaczone lub nie',
   booleanRequired: 'To pole musi być zaznaczone',
   phone: 'Musisz podać poprawny numer telefonu',
@@ -154,7 +154,7 @@ export function BasicForms() {
                 <span>przelew tradycyjny</span>
               </div>
             </div>
-            {errors.paymentMethod?.message}
+            <span className="regulamin">{errors.paymentMethod?.message}</span>
           </div>
 
           <div className="opcje">
@@ -196,64 +196,70 @@ export function BasicForms() {
         {/* sekcja 2 */}
         <div className="h3_div">
           <h2>Dane do realizacji zamówienia</h2>
-          <div>
+          <div className="order_div">
             <label htmlFor="name">Imię i nazwisko*</label>
             <input
+              className="select_div"
               id="name"
               type="name"
               placeholder="wpisz swoje imię i nazwisko"
               {...register('name')}
             />
-            {errors.name?.message}
+            <span className="regulamin">{errors.name?.message}</span>
             {/* {errors.name && <span>Nazwisko jest wymagane!</span>} */}
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="nickname">Twój pseudonim*</label>
             <input
+              className="select_div"
               id="nickname"
               placeholder="wpisz swój pseudonim"
               {...register('nickname')}
             />
-            {errors.nickname?.message}
+            <span className="regulamin"> {errors.nickname?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="address">Adres do wysyłki*</label>
             <input
+              className="select_div"
               id="address"
               type="address"
               placeholder="adres, na który mamy wysłać zamówienie"
               {...register('address')}
             />
-            {errors.address?.message}
+            <span className="regulamin">{errors.address?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="email">Adres e-mail*</label>
             <input
+              className="select_div"
               id="email"
               type="email"
               placeholder="jan.kowalski@gmail.com"
               {...register('email')}
             />
-            {errors.email?.message}
+            <span className="regulamin">{errors.email?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="phone">Numer kontaktowy*</label>
             <input
+              className="select_div"
               id="phone"
               type="tel"
               placeholder="888888888"
               {...register('phone')}
             />
-            {errors.phone?.message}
+            <span className="regulamin">{errors.phone?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="description">Dodatkowe uwagi do zamówienia</label>
             <textarea
+              className="select_div1"
               id="description"
               placeholder="jeśli masz jakieś uwagi, wpisz je tutaj..."
               {...register('description')}
@@ -263,7 +269,7 @@ export function BasicForms() {
         </div>
 
         {/* sekcja 3 */}
-        <div>
+        <div className="h4_div">
           <h2>Zakładanie konta</h2>
           <div>
             {/* htmlFor -> składania języka HTML i podstawowych formularzy */}
@@ -276,68 +282,76 @@ export function BasicForms() {
 
                 FUNKCJ
             */}
-            <div>
+            <div className="order_div1">
               {/* name === htmlFor (z label) -> składania języka HTML i podstawowych formularzy */}
 
               <input
+                className="checkbox1"
                 name="createAccount"
                 type="checkbox"
                 // część odpowiedzialna za rejestracje inputa do naszego zastosowania przy użyciu biblioteki react-hook-form
                 {...register('isCreateAccountChecked')}
               />
-              <span>Zakładam konto</span>
+              <span className="createaccount">Zakładam konto</span>
             </div>
           </div>
 
           {/* TODO: add func to show/hide this inputs(password, confirmPassword) */}
           {/* ASK DESIGNER: dlaczego... */}
-          <div>
+          <div className="order_div">
             <label htmlFor="password">Moje hasło</label>
             <input
+              className="select_div"
               type="password"
               id="password"
               placeholder="wpisz hasło"
               {...register('password')}
             />
-            {errors.password?.message}
+            <span className="regulamin"> {errors.password?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div">
             <label htmlFor="confirmPassword">Powtórz hasło</label>
             <input
+              className="select_div"
               type="password"
               id="confirmPassword"
               placeholder="wpisz swoje hasło ponownie"
               {...register('confirmPassword')}
             />
-            {errors.confirmPassword?.message}
+            <span className="regulamin">
+              {' '}
+              {errors.confirmPassword?.message}{' '}
+            </span>
           </div>
         </div>
 
         {/* sekcja 4 */}
-        <div>
+        <div className="h4_div">
           <h2>Zgody i newsletter</h2>
-          <div>
+          <div className="zgody_div">
             <label htmlFor="terms">
               Realizując zamówienie, akceptujesz regulamin naszego sklepu
             </label>
             <div>
               <input
+                className="checkbox1"
                 name="terms"
                 type="checkbox"
                 {...register('isTermsChecked')}
               />
-              <span>akceptuję regulamin*</span>
+              <span className="regulamin">akceptuję regulamin*</span>
             </div>
-            {errors.isTermsChecked?.message}
+            <span className="regulamin">{errors.isTermsChecked?.message}</span>
           </div>
 
-          <div>
+          <div className="order_div3">
             <label htmlFor="newsletter">
               Dołącz do naszego newslettera z promocjami dla naszych klientów
             </label>
             <div>
               <input
+                className="checkbox1"
                 name="newsletter"
                 type="checkbox"
                 {...register('isNewsletterChecked')}
@@ -347,7 +361,9 @@ export function BasicForms() {
           </div>
         </div>
 
-        <button type="submit">składam zamówienie</button>
+        <button className="button_zamowienie" type="submit">
+          składam zamówienie
+        </button>
       </form>
     </>
   );
