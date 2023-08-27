@@ -1,0 +1,33 @@
+.htms_css_list {
+  list-style: none;
+}
+.listyle {
+  border-radius: 7px;
+  border: 0.747px solid var(--black-black, #000);
+  margin-bottom: 10px;
+  display: flex;
+  width: 460px;
+  height: 63px;
+  padding: 15px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: var(--black-black, #000);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* header/H5 */
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+a:active {
+  color: var(--primary-primary, #fe3756);
+}
+.closesquareposition {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
