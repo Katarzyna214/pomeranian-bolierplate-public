@@ -112,7 +112,9 @@ export function BasicForms() {
       <form className="form_container" onSubmit={handleSubmit(onSubmit)}>
         {/* sekcja 1 */}
         <div>
-          <h2>Zamówienie produktu</h2>
+          <div className="h2_div">
+            <h2>Zamówienie produktu</h2>
+          </div>
           <div className="opcje">
             <label htmlFor="productType">Wybierz produkt*</label>
 
@@ -161,6 +163,7 @@ export function BasicForms() {
             </label>
             <div className="additional-option">
               <input
+                className="checkbox1"
                 name="orderInformations"
                 type="checkbox"
                 {...register('isEnvChecked')}
@@ -170,6 +173,7 @@ export function BasicForms() {
 
             <div className="additional-option">
               <input
+                className="checkbox1"
                 name="orderInformations"
                 type="checkbox"
                 {...register('isGithubChecked')}
@@ -179,6 +183,7 @@ export function BasicForms() {
 
             <div className="additional-option">
               <input
+                className="checkbox1"
                 name="orderInformations"
                 type="checkbox"
                 {...register('isAdditionalDataChecked')}
@@ -189,7 +194,7 @@ export function BasicForms() {
         </div>
 
         {/* sekcja 2 */}
-        <div>
+        <div className="h3_div">
           <h2>Dane do realizacji zamówienia</h2>
           <div>
             <label htmlFor="name">Imię i nazwisko*</label>
