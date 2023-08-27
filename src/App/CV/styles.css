@@ -21,6 +21,7 @@
   font-weight: 700;
   line-height: 34px;
   color: var(--secondary-secondary, #23213d);
+  text-decoration: none;
 }
 .cv .cvContainer {
   display: flex;

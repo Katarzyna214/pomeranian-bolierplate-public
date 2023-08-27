@@ -11,7 +11,7 @@ export const CV = () => {
     <div className="cv">
       <Link to=".." relative="path" className="linkCv">
         {' '}
-        {'< Moje CV'}{' '}
+        {'< MOJE CV'}{' '}
       </Link>
       <p className="naglowek">
         Poniżej znajdziesz informacje na temat mojego wykształcenia oraz

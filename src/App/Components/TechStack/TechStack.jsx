@@ -19,7 +19,7 @@ export const TechStack = () => {
       {' '}
       <div className="dashboard-tech-stack-container">
         {' '}
-        <Link to=".." relative="path">
+        <Link to=".." relative="path" className="linktoformularzzamowienia">
           {' '}
           {'< TECHSTACK'}{' '}
         </Link>{' '}

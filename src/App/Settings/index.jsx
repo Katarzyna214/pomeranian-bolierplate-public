@@ -15,7 +15,7 @@ export const Settings = () => {
 
   return (
     <div className="dashboard">
-      <Link to=".." relative="path">
+      <Link to=".." relative="path" className="linktoformularzzamowienia">
         {' '}
         {'< USTAWIENIA'}{' '}
       </Link>
