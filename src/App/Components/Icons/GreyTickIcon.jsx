@@ -1,86 +1,16 @@
 export function GreyTickIcon({ className = '' }) {
   return (
     <svg
-      width="22"
-      height="23"
-      viewBox="0 0 22 23"
+      width="31"
+      height="26"
+      viewBox="0 0 31 26"
       fill="none"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M7.33325 2.3335V5.0835"
-        stroke="#000"
-        stroke-width="1.4375"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M14.6667 2.3335V5.0835"
-        stroke="#000"
-        stroke-width="1.4375"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M3.20837 8.83203H18.7917"
-        stroke="#000"
-        stroke-width="1.4375"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M19.2501 8.29159V16.0833C19.2501 18.8333 17.8751 20.6666 14.6667 20.6666H7.33339C4.12506 20.6666 2.75006 18.8333 2.75006 16.0833V8.29159C2.75006 5.54159 4.12506 3.70825 7.33339 3.70825H14.6667C17.8751 3.70825 19.2501 5.54159 19.2501 8.29159Z"
-        stroke="#000"
-        stroke-width="1.4375"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M14.3868 13.0582H14.395"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M14.3868 15.8087H14.395"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M10.9959 13.0582H11.0041"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M10.9959 15.8087H11.0041"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M7.60314 13.0582H7.61137"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M7.60314 15.8087H7.61137"
-        stroke="#000"
-        stroke-width="1.91667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M10.7314 25.2638C10.5553 25.2641 10.3808 25.2245 10.218 25.1475C10.0553 25.0704 9.90741 24.9574 9.783 24.8148L0.392971 14.0842C0.268399 13.9419 0.169579 13.7729 0.102153 13.5869C0.0347267 13.4009 1.51875e-05 13.2016 4.98265e-09 13.0002C-1.51775e-05 12.7989 0.0346664 12.5996 0.102064 12.4136C0.169462 12.2276 0.268257 12.0585 0.392807 11.9162C0.517357 11.7738 0.665224 11.6609 0.827965 11.5838C0.990706 11.5068 1.16513 11.4671 1.34129 11.4671C1.51745 11.467 1.69188 11.5067 1.85463 11.5837C2.01739 11.6607 2.16527 11.7736 2.28984 11.916L10.7314 21.5627L28.5629 1.18461C28.8145 0.897439 29.1556 0.736197 29.5112 0.736328C29.8669 0.73646 30.2079 0.897955 30.4593 1.18532C30.7108 1.47268 30.8521 1.86239 30.8523 2.2688C30.8524 2.67521 30.7114 3.06505 30.4601 3.35265L11.68 24.8148C11.5556 24.9574 11.4077 25.0704 11.2449 25.1474C11.0821 25.2245 10.9076 25.264 10.7314 25.2638Z"
+        fill="#23213D"
       />
     </svg>
   );
