@@ -42,7 +42,7 @@ export function AppAside() {
           </li>
           <li>
             <NoteIcon className="Icon" />
-            <NavLink to="basic-forms">Formularz</NavLink>
+            <NavLink to="basic-forms/">Formularz</NavLink>
           </li>
           <li>
             <CalendarIcon className="Icon" />

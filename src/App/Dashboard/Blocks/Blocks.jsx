@@ -52,7 +52,7 @@ export const Blocks = () => {
             Formularz kontaktowy do zamówienia
           </p>
           {/* <p className="dashboard-tile-description">zobacz więcej</p> */}
-          <Link to="/basic-forms/">Zobacz więcej</Link>
+          <Link to="basic-forms/">Zobacz więcej</Link>
         </div>{' '}
         <div>
           {' '}

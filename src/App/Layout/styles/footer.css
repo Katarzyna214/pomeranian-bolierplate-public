@@ -8,7 +8,7 @@ footer {
 }
 
 footer > * {
-  color: var(--color-white);
+  color: #ffff;
   text-decoration: none;
 }
 
@@ -24,4 +24,7 @@ footer a {
   position: relative;
   right: 80px;
   width: 75%;
+}
+.email {
+  color: #ffff;
 }
