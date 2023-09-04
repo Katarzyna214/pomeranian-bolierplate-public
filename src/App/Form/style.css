@@ -1,8 +1,33 @@
 .form_container {
   background-color: rgba(244, 245, 247, 1);
-  width: max-content;
-  height: max-content;
-  box-shadow: 0px 65px 30px 0px hsla(0, 0%, 0%, 0.01);
+  width: 801px;
+  height: 2600px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--gray-80, #f4f5f7);
+  box-shadow: 0px 65px 30px 0px rgba(0, 0, 0, 0.01),
+    0px 8px 20px 0px rgba(0, 0, 0, 0.04), 0px 17px 35px 0px rgba(0, 0, 0, 0.05),
+    0px -4px 26px 0px rgba(0, 0, 0, 0.08);
+}
+.h2_div {
+  padding-left: 85px;
+  padding-top: 65px;
+  padding-right: 447px;
+  padding-bottom: 22px;
+}
+.h3_div {
+  padding-left: 82px;
+  padding-top: 25px;
+  padding-right: 335px;
+  padding-bottom: 22px;
+}
+.h4_div {
+  padding-left: 82px;
+  padding-right: 231px;
+  padding-bottom: 22px;
 }
 .h2 {
   font-family: 'Poppins';
@@ -20,4 +45,162 @@ form button {
   box-shadow: 0 0 5px #fe3756;
   font-weight: bold;
   font-size: 16px;
+}
+.linktoformularzzamowienia {
+  color: var(--secondary-secondary, #23213d);
+  /* body/bold-18 */
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  padding-bottom: 15px;
+}
+label {
+  color: var(--text-text-primary, #222);
+  /* body/bold-16 */
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  padding-right: 2px;
+}
+.opcje {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+  padding-bottom: 36px;
+  padding-left: 82px;
+  padding-right: 231px;
+}
+.payment {
+  display: grid;
+  grid-template-columns: fr, 270px;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+select {
+  display: flex;
+  height: 48px;
+  padding: 13px 16px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 1px solid var(--grey-300, #c8cbd1);
+  background: #fff;
+  color: var(--gray-500, #999);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.select_div {
+  display: flex;
+  height: 48px;
+  width: 488px;
+  padding: 13px 16px;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 1px solid var(--grey-300, #c8cbd1);
+  background: #fff;
+  color: var(--gray-500, #999);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.select_div1 {
+  width: 488px;
+  height: 169px;
+  padding: 13px 16px;
+  align-items: center;
+  border: 1px solid var(--grey-300, #c8cbd1);
+  border-radius: 5px;
+  color: var(--gray-500, #999);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.order_div {
+  padding-bottom: 36px;
+}
+
+option {
+  color: var(--gray-500, #999);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.payment-option input {
+  appearance: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+.payment-option input:checked {
+  border: 6px solid #fe3756;
+}
+
+.checkbox1 {
+  display: inline-block;
+  width: 24px; /* dostosuj wielkość */
+  height: 24px; /* dostosuj wielkość */
+  appearance: none; /* usuwa domyślny styl */
+  -webkit-appearance: none; /* dla przeglądarek opartych na WebKit */
+  background: (--gray-80, #f4f5f7); /* kolor tła checkboxa */
+  border: 1px solid #999; /* opcjonalny obramowanie */
+  border-radius: 4px; /* dostosuj kształt checkboxa */
+  margin-right: 10px;
+}
+.checkbox1::before {
+  content: '\2713'; /* kod HTML dla kropeczki (tick mark) */
+  transform: translate(-50%, -50%);
+  color: white; /* kolor kropeczki */
+  font-size: 14px; /* dostosuj wielkość kropeczki */
+  font-weight: bolder;
+  visibility: hidden;
+  position: relative;
+  left: 25%;
+}
+.checkbox1:checked {
+  background-color: #fe3756;
+}
+.checkbox1:checked::before {
+  visibility: visible;
+}
+.button_zamowienie {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  left: 25%;
+}
+.order_div1 {
+  padding-bottom: 36px;
+  padding-top: 16px;
+}
+.regulamin {
+  color: #fe3756;
+}
+.order_div3 {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }

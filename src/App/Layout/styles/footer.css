@@ -4,13 +4,12 @@ footer {
   display: grid;
   grid-template-columns: 1fr 270px;
   position: relative;
-  padding: 18px;
+  padding: 15px 5px;
 }
 
 footer > * {
-  color: var(--color-white);
+  color: #ffff;
   text-decoration: none;
-  display: flex;
 }
 
 footer .text-up {
@@ -21,9 +20,11 @@ footer .text-down {
   align-items: flex-end;
 }
 
-footer a{
- text-align: right;
- width: 100%;
- display: block;
+footer a {
+  position: relative;
+  right: 80px;
+  width: 75%;
 }
-
+.email {
+  color: #ffff;
+}

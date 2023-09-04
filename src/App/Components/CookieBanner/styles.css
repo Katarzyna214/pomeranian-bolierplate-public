@@ -1,5 +1,5 @@
 .cookie-wrapper {
-  padding: 80px 120px 86px 120px;
+  padding: 60px 120px 66px 120px;
   grid-area: footer;
   display: flex;
   grid-template-columns: 2fr 270px;
@@ -9,6 +9,7 @@
   color: #ffffff;
   width: 100%;
   justify-content: space-between;
+  height: 40%;
 }
 
 @media screen and (max-width: 1196px) {

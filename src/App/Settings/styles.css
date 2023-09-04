@@ -1,3 +1,70 @@
 .dashboard {
-    
+}
+.settingsParagraph {
+  color: var(--text-text-primary, #222);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+}
+.settingsHeading {
+  color: var(--text-text-primary, #222);
+
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+}
+.radiobuttonssettings {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  justify-content: flex-end;
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 16px; /* Domyślny rozmiar czcionki */
+}
+
+body.small-font {
+  font-size: 14px;
+}
+
+body.medium-font {
+  font-size: 16px;
+}
+
+body.large-font {
+  font-size: 18px;
+}
+label {
+  color: var(--text-text-primary, #222);
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.font-size-options input {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+.font-size-options input:checked {
+  background-color: #fe3756;
 }

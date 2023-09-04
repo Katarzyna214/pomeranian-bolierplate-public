@@ -1,0 +1,44 @@
+.td1style {
+  font-weight: bolder;
+  width: 80px;
+  vertical-align: text-top;
+}
+.tdstyle {
+  line-height: 11px;
+  width: 250px;
+  vertical-align: text-top;
+}
+.tddivstyle {
+  margin-bottom: 12px;
+  vertical-align: text-top;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.td2style {
+  width: fit-content;
+  vertical-align: text-top;
+}
+
+.tablecv {
+  width: 100%;
+  vertical-align: text-top;
+
+  border-collapse: collapse;
+}
+.tr1 {
+  padding: 1px;
+  margin-right: 1px;
+}
+strong {
+  line-height: normal;
+}
+.detailsparagraph {
+  line-height: normal;
+}
+.additional-info-list {
+  display: flex; /* Używamy flexboxa */
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  width: 630px;
+}

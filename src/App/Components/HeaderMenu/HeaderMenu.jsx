@@ -32,7 +32,7 @@ export const HeaderMenu = () => {
       <button onClick={clickHandler} className="header_button">
         <MenuArrow className="menu-arrow" />{' '}
       </button>
-      <div className="rightcornermenupopup">
+      <div className={`rightcornermenupopup ${isVisible ? 'visible' : ''}`}>
         {isVisible && <RightCornerMenuPopup />}
       </div>
     </div>

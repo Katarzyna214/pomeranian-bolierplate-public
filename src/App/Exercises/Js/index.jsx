@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes, useLocation, useRoutes } from 'react-router-dom';
-
+import './js_styles.css';
 import { GoBackLink } from '../../Components/GoBack/GoBack';
 import { getRouterMetaDataByCurrentPath } from '../../router-data/getRouterMetaDataByCurrentPath';
 
@@ -11,15 +11,16 @@ import {
   blockRouterData as jsBlockRouterData,
   blockRouterMetaData as jsBlockRouterMetaData,
 } from './view-router-data';
-
+import { ReactComponent as CloseSquare } from '../../Images/close-square.svg';
 export function JsExercises() {
   const element = useRoutes(jsBlockRouterData);
 
   return (
     <div>
-      <p>JS - lista ćwiczeń</p>
-      <GoBackLink label="Zamknij" />
-
+      <div className="closesquareposition">
+        <p>JS - ćwiczenia</p>
+        <GoBackLink label={<CloseSquare />} />
+      </div>
       <hr />
 
       <Routes>

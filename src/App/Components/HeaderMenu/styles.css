@@ -67,5 +67,22 @@ h5 {
   display: flex;
   position: absolute;
   bottom: 10px;
-  left: 80em;
+  left: -150px;
+}
+.rightcornermenupopup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  transform: translateY(-10px); /* Start with a slight upward translation */
+  transition: opacity 0.3s, transform 0.3s;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.rightcornermenupopup.visible {
+  opacity: 5;
+  transform: translateY(0); /* Move it back to its original position */
 }

@@ -6,6 +6,28 @@
 }
 
 .exercises-categories a.active {
-  background-color: var(--color-primary-blue);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--primary-primary, #fe3756);
+  border: 0.747px solid var(--primary-primary, #fe3756);
+}
+.linktoformularzzamowienia {
+  text-decoration: none;
+  color: var(--secondary-secondary, #23213d);
+  /* body/bold-18 */
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  padding-bottom: 15px;
+}
+.cwiczeniaparagraph {
+  color: var(--text-text-primary, #222);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* header/H4 */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
 }

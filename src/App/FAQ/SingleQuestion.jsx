@@ -25,7 +25,7 @@ export const SingleQuestion = (props) => {
           <Vector className="button1" />{' '}
         </button>
       </div>
-      <hr className="hr" />
+      {/* <hr className="hr" /> */}
       <p className="par2">{isVisible && answear}</p>
     </div>
   );

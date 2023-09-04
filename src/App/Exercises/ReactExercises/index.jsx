@@ -11,15 +11,16 @@ import {
   blockRouterData as reactBlockRouterData,
   blockRouterMetaData as reactBlockRouterMetaData,
 } from './view-router-data';
-
+import { ReactComponent as CloseSquare } from '../../Images/close-square.svg';
 export function ReactExercises() {
   const element = useRoutes(reactBlockRouterData);
 
   return (
     <div>
-      <p>React - lista ćwiczeń</p>
-      <GoBackLink label="Zamknij" />
-
+      <div className="closesquareposition">
+        <p>React - ćwiczenia</p>
+        <GoBackLink label={<CloseSquare />} />
+      </div>
       <hr />
 
       <Routes>
