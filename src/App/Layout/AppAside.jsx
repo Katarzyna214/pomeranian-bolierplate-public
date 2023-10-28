@@ -10,6 +10,8 @@ import './styles/aside.css';
 import { MoleIcon } from '../Components/Icons/MoleIcon';
 import { MemoryIcon } from '../Components/Icons/GameBoyIcon';
 import { NoteIcon } from '../Components/Icons/NoteIcon';
+import React from 'react';
+import { useState } from 'react';
 export function AppAside() {
   return (
     <aside>
