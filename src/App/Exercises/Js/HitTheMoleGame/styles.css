@@ -27,10 +27,10 @@
 }
 
 .button:hover {
-  background-color: #106a9a;
+  background-color: #fe3756;
   cursor: pointer;
+  color: #fff;
 }
-
 .button-active {
   background-color: #fe3756;
 }
