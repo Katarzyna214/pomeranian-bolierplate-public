@@ -42,7 +42,7 @@ form button {
   color: #fff;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 0 5px #fe3756;
+  /* box-shadow: 0 0 5px #fe3756; */
   font-weight: bold;
   font-size: 16px;
 }

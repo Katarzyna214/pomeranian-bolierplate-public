@@ -113,7 +113,7 @@ export function AddTask({
         ></textarea>
         <div className="threebuttons">
           <button type="submit" className="button-add-addtask">
-            {isEditMode ? 'ZAPISZ ZMIANY' : 'DODAJ'}
+            {isEditMode ? 'Zapisz zmiany' : 'DODAJ'}
           </button>
           <button onClick={handleBack} className="button-delete-addtask">
             Cofnij

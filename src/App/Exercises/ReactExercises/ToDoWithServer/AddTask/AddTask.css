@@ -34,7 +34,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.button-delete-addtask {
+.threebuttons .button-delete-addtask {
   width: 163px;
   height: 56px;
   background-color: #000000;
@@ -48,7 +48,7 @@
   margin-top: 50px; */
 }
 
-.button-add-addtask {
+.threebuttons .button-add-addtask {
   width: 163px;
   height: 56px;
   background-color: #fe3756;
@@ -57,6 +57,7 @@
   border: none;
   cursor: pointer;
   margin-left: 53px;
+  padding: 1px 1px;
 }
 .blad {
   color: #fe3756;
